@@ -3,27 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		622669EC245C74C800E00F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622669EB245C74C800E00F55 /* AppDelegate.swift */; };
 		622669EE245C74C800E00F55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622669ED245C74C800E00F55 /* SceneDelegate.swift */; };
-		622669F0245C74C800E00F55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622669EF245C74C800E00F55 /* ViewController.swift */; };
+		622669F0245C74C800E00F55 /* IntroScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622669EF245C74C800E00F55 /* IntroScreenViewController.swift */; };
 		622669F3245C74C800E00F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622669F1245C74C800E00F55 /* Main.storyboard */; };
 		622669F5245C74CB00E00F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 622669F4245C74CB00E00F55 /* Assets.xcassets */; };
 		622669F8245C74CB00E00F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622669F6245C74CB00E00F55 /* LaunchScreen.storyboard */; };
+		62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622669FF245C7BD700E00F55 /* WelcomeViewController.swift */; };
+		62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62266A02245C7D0C00E00F55 /* IntroViewClass.swift */; };
+		DCE97A09DAA336210D618FB3 /* Pods_Factilicious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56BE13E8A6BE9AFA6463549 /* Pods_Factilicious.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		622669E8245C74C800E00F55 /* Factilicious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Factilicious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		622669EB245C74C800E00F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		622669ED245C74C800E00F55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		622669EF245C74C800E00F55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		622669EF245C74C800E00F55 /* IntroScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroScreenViewController.swift; sourceTree = "<group>"; };
 		622669F2245C74C800E00F55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		622669F4245C74CB00E00F55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		622669F7245C74CB00E00F55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		622669F9245C74CB00E00F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		622669FF245C7BD700E00F55 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		62266A02245C7D0C00E00F55 /* IntroViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewClass.swift; sourceTree = "<group>"; };
+		C56BE13E8A6BE9AFA6463549 /* Pods_Factilicious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Factilicious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6691953CCD816BDB7960D6E /* Pods-Factilicious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Factilicious.release.xcconfig"; path = "Target Support Files/Pods-Factilicious/Pods-Factilicious.release.xcconfig"; sourceTree = "<group>"; };
+		FD9C85A83E0302F65844898B /* Pods-Factilicious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Factilicious.debug.xcconfig"; path = "Target Support Files/Pods-Factilicious/Pods-Factilicious.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCE97A09DAA336210D618FB3 /* Pods_Factilicious.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29FF10A5B3D416F8E59BD406 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C56BE13E8A6BE9AFA6463549 /* Pods_Factilicious.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2FA16F2396582C4554786CAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD9C85A83E0302F65844898B /* Pods-Factilicious.debug.xcconfig */,
+				E6691953CCD816BDB7960D6E /* Pods-Factilicious.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		622669DF245C74C800E00F55 = {
 			isa = PBXGroup;
 			children = (
 				622669EA245C74C800E00F55 /* Factilicious */,
 				622669E9245C74C800E00F55 /* Products */,
+				2FA16F2396582C4554786CAF /* Pods */,
+				29FF10A5B3D416F8E59BD406 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +86,23 @@
 			children = (
 				622669EB245C74C800E00F55 /* AppDelegate.swift */,
 				622669ED245C74C800E00F55 /* SceneDelegate.swift */,
-				622669EF245C74C800E00F55 /* ViewController.swift */,
+				62266A01245C7CCE00E00F55 /* Intro Screen */,
 				622669F1245C74C800E00F55 /* Main.storyboard */,
 				622669F4245C74CB00E00F55 /* Assets.xcassets */,
 				622669F6245C74CB00E00F55 /* LaunchScreen.storyboard */,
 				622669F9245C74CB00E00F55 /* Info.plist */,
+				622669FF245C7BD700E00F55 /* WelcomeViewController.swift */,
 			);
 			path = Factilicious;
+			sourceTree = "<group>";
+		};
+		62266A01245C7CCE00E00F55 /* Intro Screen */ = {
+			isa = PBXGroup;
+			children = (
+				622669EF245C74C800E00F55 /* IntroScreenViewController.swift */,
+				62266A02245C7D0C00E00F55 /* IntroViewClass.swift */,
+			);
+			path = "Intro Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 622669FC245C74CB00E00F55 /* Build configuration list for PBXNativeTarget "Factilicious" */;
 			buildPhases = (
+				F31F6B98169926FAEC017B1C /* [CP] Check Pods Manifest.lock */,
 				622669E4245C74C800E00F55 /* Sources */,
 				622669E5245C74C800E00F55 /* Frameworks */,
 				622669E6245C74C800E00F55 /* Resources */,
+				60E3763DDC42830679BFA4A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +173,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		60E3763DDC42830679BFA4A3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Factilicious/Pods-Factilicious-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Factilicious/Pods-Factilicious-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Factilicious/Pods-Factilicious-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F31F6B98169926FAEC017B1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Factilicious-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		622669E4245C74C800E00F55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				622669F0245C74C800E00F55 /* ViewController.swift in Sources */,
+				622669F0245C74C800E00F55 /* IntroScreenViewController.swift in Sources */,
+				62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */,
+				62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */,
 				622669EC245C74C800E00F55 /* AppDelegate.swift in Sources */,
 				622669EE245C74C800E00F55 /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +366,7 @@
 		};
 		622669FD245C74CB00E00F55 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD9C85A83E0302F65844898B /* Pods-Factilicious.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +385,7 @@
 		};
 		622669FE245C74CB00E00F55 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6691953CCD816BDB7960D6E /* Pods-Factilicious.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

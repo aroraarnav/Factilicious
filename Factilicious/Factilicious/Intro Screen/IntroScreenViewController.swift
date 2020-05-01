@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  IntroScreenViewController.swift
 //  Factilicious
 //
 //  Created by Arnav Arora on 01/05/20.
@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import paper_onboarding
 
-class ViewController: UIViewController {
+class IntroScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
