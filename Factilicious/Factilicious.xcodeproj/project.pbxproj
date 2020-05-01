@@ -90,6 +90,7 @@
 		622669EA245C74C800E00F55 /* Factilicious */ = {
 			isa = PBXGroup;
 			children = (
+				62E13000245CBEF7001AB4BF /* Login + Sign Up */,
 				622669EB245C74C800E00F55 /* AppDelegate.swift */,
 				622669ED245C74C800E00F55 /* SceneDelegate.swift */,
 				62266A01245C7CCE00E00F55 /* Intro Screen */,
@@ -98,8 +99,6 @@
 				622669F6245C74CB00E00F55 /* LaunchScreen.storyboard */,
 				622669F9245C74CB00E00F55 /* Info.plist */,
 				622669FF245C7BD700E00F55 /* WelcomeViewController.swift */,
-				62E12FFA245CA22C001AB4BF /* LoginViewController.swift */,
-				62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */,
 				62E12FFE245CA249001AB4BF /* HomeViewController.swift */,
 			);
 			path = Factilicious;
@@ -112,6 +111,15 @@
 				62266A02245C7D0C00E00F55 /* IntroViewClass.swift */,
 			);
 			path = "Intro Screen";
+			sourceTree = "<group>";
+		};
+		62E13000245CBEF7001AB4BF /* Login + Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				62E12FFA245CA22C001AB4BF /* LoginViewController.swift */,
+				62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */,
+			);
+			path = "Login + Sign Up";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
