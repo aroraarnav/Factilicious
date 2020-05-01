@@ -8,5 +8,7 @@ target 'Factilicious' do
   # Pods for Factilicious
 
 	pod 'paper-onboarding'
+	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
 
 end

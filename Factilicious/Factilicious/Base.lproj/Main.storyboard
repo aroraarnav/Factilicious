@@ -269,11 +269,28 @@
                         <outlet property="nameTextField" destination="Jvc-vq-G7w" id="tLz-Dt-wCB"/>
                         <outlet property="passwordTextField" destination="TAD-vV-GSm" id="ASE-fz-CQh"/>
                         <outlet property="signUpButton" destination="quI-wN-Bqn" id="nqJ-ED-iWe"/>
+                        <segue destination="98x-tC-pql" kind="show" identifier="categoriesSegue" id="Rdm-g1-SAw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nwe-pO-vIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3412" y="621"/>
+        </scene>
+        <!--Categories View Controller-->
+        <scene sceneID="tET-u3-gQ5">
+            <objects>
+                <viewController id="98x-tC-pql" customClass="CategoriesViewController" customModule="Factilicious" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ybZ-Se-f60">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0h9-Js-yAq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LgH-fy-B4o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x9r-dY-WBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4975" y="91"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="9ZH-5h-ogx">
