@@ -15,6 +15,9 @@
 		622669F8245C74CB00E00F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622669F6245C74CB00E00F55 /* LaunchScreen.storyboard */; };
 		62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622669FF245C7BD700E00F55 /* WelcomeViewController.swift */; };
 		62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62266A02245C7D0C00E00F55 /* IntroViewClass.swift */; };
+		62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFA245CA22C001AB4BF /* LoginViewController.swift */; };
+		62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */; };
+		62E12FFF245CA249001AB4BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFE245CA249001AB4BF /* HomeViewController.swift */; };
 		DCE97A09DAA336210D618FB3 /* Pods_Factilicious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56BE13E8A6BE9AFA6463549 /* Pods_Factilicious.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		622669F9245C74CB00E00F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		622669FF245C7BD700E00F55 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		62266A02245C7D0C00E00F55 /* IntroViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewClass.swift; sourceTree = "<group>"; };
+		62E12FFA245CA22C001AB4BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		62E12FFE245CA249001AB4BF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C56BE13E8A6BE9AFA6463549 /* Pods_Factilicious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Factilicious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6691953CCD816BDB7960D6E /* Pods-Factilicious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Factilicious.release.xcconfig"; path = "Target Support Files/Pods-Factilicious/Pods-Factilicious.release.xcconfig"; sourceTree = "<group>"; };
 		FD9C85A83E0302F65844898B /* Pods-Factilicious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Factilicious.debug.xcconfig"; path = "Target Support Files/Pods-Factilicious/Pods-Factilicious.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +98,9 @@
 				622669F6245C74CB00E00F55 /* LaunchScreen.storyboard */,
 				622669F9245C74CB00E00F55 /* Info.plist */,
 				622669FF245C7BD700E00F55 /* WelcomeViewController.swift */,
+				62E12FFA245CA22C001AB4BF /* LoginViewController.swift */,
+				62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */,
+				62E12FFE245CA249001AB4BF /* HomeViewController.swift */,
 			);
 			path = Factilicious;
 			sourceTree = "<group>";
@@ -220,7 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */,
+				62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */,
 				622669F0245C74C800E00F55 /* IntroScreenViewController.swift in Sources */,
+				62E12FFF245CA249001AB4BF /* HomeViewController.swift in Sources */,
 				62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */,
 				62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */,
 				622669EC245C74C800E00F55 /* AppDelegate.swift in Sources */,
@@ -372,6 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85CS83A5PY;
 				INFOPLIST_FILE = Factilicious/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,6 +404,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 85CS83A5PY;
 				INFOPLIST_FILE = Factilicious/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

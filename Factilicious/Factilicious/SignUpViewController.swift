@@ -1,18 +1,19 @@
 //
-//  WelcomeViewController.swift
+//  SignUpViewController.swift
 //  Factilicious
 //
-//  Created by Arnav Arora on 01/05/20.
+//  Created by Arnav Arora on 02/05/20.
 //  Copyright © 2020 Jayant Arora. All rights reserved.
 //
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
-    
+class SignUpViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Do any additional setup after loading the view.
     }
     
 

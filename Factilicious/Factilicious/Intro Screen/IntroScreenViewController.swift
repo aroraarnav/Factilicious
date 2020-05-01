@@ -22,12 +22,19 @@ class IntroScreenViewController: UIViewController {
     
     @IBAction func getStartedPressed(_ sender: Any) {
         userData.set(true, forKey: "introCompleted")
-        userData.synchronize()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if userData.bool(forKey: "introCompleted") == true {
+            performSegue(withIdentifier: "mainSegue", sender: nil)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         introView.dataSource = self
         introView.delegate = self
         
