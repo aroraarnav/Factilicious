@@ -17,11 +17,16 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hideKeyboardWhenTappedAround()
         // Set up Navbar
-    self.navigationController?.navigationBar.topItem?.title = "Welcome"
+        self.navigationController?.navigationBar.topItem?.title = "Welcome"
         
         // Apply Corner Radius
         loginButton.layer.cornerRadius = 25
+        
+        errorLabel.isHidden = true
+        
+        setUpElements()
     }
     
     @IBAction func loginPressed(_ sender: Any) {
@@ -31,5 +36,10 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func privacyPressed(_ sender: Any) {
+    }
+    
+    func setUpElements() {
+        Utilities.styleTextFieldLogin(emailTextField)
+        Utilities.styleTextFieldLogin(passwordTextField)
     }
 }

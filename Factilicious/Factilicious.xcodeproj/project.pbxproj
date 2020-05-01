@@ -15,6 +15,9 @@
 		622669F8245C74CB00E00F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622669F6245C74CB00E00F55 /* LaunchScreen.storyboard */; };
 		62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622669FF245C7BD700E00F55 /* WelcomeViewController.swift */; };
 		62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62266A02245C7D0C00E00F55 /* IntroViewClass.swift */; };
+		62A0B82D245CCD56000272A5 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */; };
+		62A0B82F245CCE72000272A5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82E245CCE72000272A5 /* Utilities.swift */; };
+		62A0B831245CD257000272A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62A0B830245CD257000272A5 /* GoogleService-Info.plist */; };
 		62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFA245CA22C001AB4BF /* LoginViewController.swift */; };
 		62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */; };
 		62E12FFF245CA249001AB4BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFE245CA249001AB4BF /* HomeViewController.swift */; };
@@ -32,6 +35,9 @@
 		622669F9245C74CB00E00F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		622669FF245C7BD700E00F55 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		62266A02245C7D0C00E00F55 /* IntroViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewClass.swift; sourceTree = "<group>"; };
+		62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
+		62A0B82E245CCE72000272A5 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		62A0B830245CD257000272A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62E12FFA245CA22C001AB4BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		62E12FFE245CA249001AB4BF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 		622669EA245C74C800E00F55 /* Factilicious */ = {
 			isa = PBXGroup;
 			children = (
+				62A0B82B245CCC65000272A5 /* Helpers */,
 				62E13000245CBEF7001AB4BF /* Login + Sign Up */,
 				622669EB245C74C800E00F55 /* AppDelegate.swift */,
 				622669ED245C74C800E00F55 /* SceneDelegate.swift */,
@@ -98,6 +105,7 @@
 				622669F4245C74CB00E00F55 /* Assets.xcassets */,
 				622669F6245C74CB00E00F55 /* LaunchScreen.storyboard */,
 				622669F9245C74CB00E00F55 /* Info.plist */,
+				62A0B830245CD257000272A5 /* GoogleService-Info.plist */,
 				622669FF245C7BD700E00F55 /* WelcomeViewController.swift */,
 				62E12FFE245CA249001AB4BF /* HomeViewController.swift */,
 			);
@@ -111,6 +119,15 @@
 				62266A02245C7D0C00E00F55 /* IntroViewClass.swift */,
 			);
 			path = "Intro Screen";
+			sourceTree = "<group>";
+		};
+		62A0B82B245CCC65000272A5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */,
+				62A0B82E245CCE72000272A5 /* Utilities.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		62E13000245CBEF7001AB4BF /* Login + Sign Up */ = {
@@ -183,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				622669F8245C74CB00E00F55 /* LaunchScreen.storyboard in Resources */,
+				62A0B831245CD257000272A5 /* GoogleService-Info.plist in Resources */,
 				622669F5245C74CB00E00F55 /* Assets.xcassets in Resources */,
 				622669F3245C74C800E00F55 /* Main.storyboard in Resources */,
 			);
@@ -237,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62A0B82D245CCD56000272A5 /* KeyboardExtension.swift in Sources */,
 				62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */,
 				62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */,
 				622669F0245C74C800E00F55 /* IntroScreenViewController.swift in Sources */,
@@ -244,6 +263,7 @@
 				62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */,
 				62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */,
 				622669EC245C74C800E00F55 /* AppDelegate.swift in Sources */,
+				62A0B82F245CCE72000272A5 /* Utilities.swift in Sources */,
 				622669EE245C74C800E00F55 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

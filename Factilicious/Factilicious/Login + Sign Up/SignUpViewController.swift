@@ -19,10 +19,16 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hideKeyboardWhenTappedAround()
+        
         // Set up Nav Bar
-    self.navigationController?.navigationBar.topItem?.title = "Welcome"
+        self.navigationController?.navigationBar.topItem?.title = "Welcome"
         // Apply corner Radius
         signUpButton.layer.cornerRadius = 25
+        
+        errorLabel.isHidden = true
+        
+        setUpElements()
     }
     
 
@@ -32,6 +38,12 @@ class SignUpViewController: UIViewController {
     @IBAction func termsPressed(_ sender: Any) {
     }
     @IBAction func privacyPolicyPressed(_ sender: Any) {
+    }
+    
+    func setUpElements() {
+        Utilities.styleTextFieldSignUp(nameTextField)
+        Utilities.styleTextFieldSignUp(emailTextField)
+        Utilities.styleTextFieldSignUp(passwordTextField)
     }
     
 }
