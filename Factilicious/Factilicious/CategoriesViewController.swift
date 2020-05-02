@@ -12,8 +12,7 @@ class CategoriesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationItem.hidesBackButton = true
-        
+        self.navigationController?.navigationBar.isHidden = true
     }
     
 

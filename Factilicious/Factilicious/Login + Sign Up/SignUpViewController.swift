@@ -15,14 +15,18 @@ class SignUpViewController: UIViewController {
     var ref : DatabaseReference!
     var handle : DatabaseHandle!
     
+    static var uid : String?
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var signUpSpinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        signUpSpinner.isHidden = true
         ref = Database.database().reference()
         hideKeyboardWhenTappedAround()
         
@@ -39,11 +43,15 @@ class SignUpViewController: UIViewController {
 
     @IBAction func signUpPressed(_ sender: Any) {
         
+        signUpSpinner.isHidden = false
+        signUpSpinner.startAnimating()
         // Validate the Fields
         let error = validateFields()
         
         if error != nil { // Error
             showError(error!)
+            signUpSpinner.stopAnimating()
+            self.signUpSpinner.isHidden = true
         } else {
             // Create Cleaned version of data
             
@@ -57,11 +65,15 @@ class SignUpViewController: UIViewController {
                 // Check for errors
                 if err != nil {
                     self.showError("We couldn't connect to our servers. Please try again later.")
+                    self.signUpSpinner.stopAnimating()
+                    self.signUpSpinner.isHidden = true
                 } else {
-                    
+                    self.signUpSpinner.stopAnimating()
+                    self.signUpSpinner.isHidden = true
                     // Transition to the Categories Screen
                     self.transitionToCategories()
                     // Add the user to the database
+                    SignUpViewController.uid =  result!.user.uid
                     self.ref.child("Users").child(result!.user.uid).setValue(["Email" : email, "Name" : name])
                 }
             }
