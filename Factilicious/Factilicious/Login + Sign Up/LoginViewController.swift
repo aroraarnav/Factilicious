@@ -65,6 +65,7 @@ class LoginViewController: UIViewController {
                     self.errorLabel.isHidden = false
                 } else {
                     self.loginSpinner.stopAnimating()
+                    self.loginSpinner.isHidden = true
                     self.transitionToHome ()
                 }
             }
@@ -78,7 +79,8 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToHome () {
-        print ("Log In Successful")
+        performSegue(withIdentifier: "loginSegue", sender: nil)
+        
     }
     func setUpElements() {
         Utilities.styleTextFieldLogin(emailTextField)

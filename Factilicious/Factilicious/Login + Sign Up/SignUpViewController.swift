@@ -71,7 +71,7 @@ class SignUpViewController: UIViewController {
                     self.signUpSpinner.stopAnimating()
                     self.signUpSpinner.isHidden = true
                     // Transition to the Categories Screen
-                    self.transitionToCategories()
+                    self.transitionToHome()
                     // Add the user to the database
                     SignUpViewController.uid =  result!.user.uid
                     self.ref.child("Users").child(result!.user.uid).setValue(["Email" : email, "Name" : name])
@@ -95,8 +95,8 @@ class SignUpViewController: UIViewController {
     }
     
     
-    func transitionToCategories () {
-        performSegue(withIdentifier: "categoriesSegue", sender: nil)
+    func transitionToHome () {
+        performSegue(withIdentifier: "signUpSegue", sender: nil)
     }
     
     // Check the fields and validate the data
