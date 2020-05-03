@@ -16,12 +16,15 @@
 		62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622669FF245C7BD700E00F55 /* WelcomeViewController.swift */; };
 		62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62266A02245C7D0C00E00F55 /* IntroViewClass.swift */; };
 		6294178E245EABBB00D4B37A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6294178D245EABBB00D4B37A /* MainViewController.swift */; };
+		62941792245EC3CC00D4B37A /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62941791245EC3CC00D4B37A /* FactsViewController.swift */; };
+		62941794245EC3DA00D4B37A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62941793245EC3DA00D4B37A /* SettingsViewController.swift */; };
+		62941796245EC68300D4B37A /* CircleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62941795245EC68300D4B37A /* CircleCollectionViewCell.swift */; };
 		62A0B82D245CCD56000272A5 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */; };
 		62A0B82F245CCE72000272A5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82E245CCE72000272A5 /* Utilities.swift */; };
 		62A0B831245CD257000272A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62A0B830245CD257000272A5 /* GoogleService-Info.plist */; };
 		62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFA245CA22C001AB4BF /* LoginViewController.swift */; };
 		62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */; };
-		62E12FFF245CA249001AB4BF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFE245CA249001AB4BF /* HomeViewController.swift */; };
+		62E12FFF245CA249001AB4BF /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFE245CA249001AB4BF /* SavedViewController.swift */; };
 		DCE97A09DAA336210D618FB3 /* Pods_Factilicious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56BE13E8A6BE9AFA6463549 /* Pods_Factilicious.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,12 +40,15 @@
 		622669FF245C7BD700E00F55 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		62266A02245C7D0C00E00F55 /* IntroViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewClass.swift; sourceTree = "<group>"; };
 		6294178D245EABBB00D4B37A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		62941791245EC3CC00D4B37A /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewController.swift; sourceTree = "<group>"; };
+		62941793245EC3DA00D4B37A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		62941795245EC68300D4B37A /* CircleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCollectionViewCell.swift; sourceTree = "<group>"; };
 		62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
 		62A0B82E245CCE72000272A5 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		62A0B830245CD257000272A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62E12FFA245CA22C001AB4BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		62E12FFE245CA249001AB4BF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		62E12FFE245CA249001AB4BF /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		C56BE13E8A6BE9AFA6463549 /* Pods_Factilicious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Factilicious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6691953CCD816BDB7960D6E /* Pods-Factilicious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Factilicious.release.xcconfig"; path = "Target Support Files/Pods-Factilicious/Pods-Factilicious.release.xcconfig"; sourceTree = "<group>"; };
 		FD9C85A83E0302F65844898B /* Pods-Factilicious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Factilicious.debug.xcconfig"; path = "Target Support Files/Pods-Factilicious/Pods-Factilicious.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +104,7 @@
 		622669EA245C74C800E00F55 /* Factilicious */ = {
 			isa = PBXGroup;
 			children = (
+				6294178F245EC36100D4B37A /* Main Scene */,
 				62A0B82B245CCC65000272A5 /* Helpers */,
 				62E13000245CBEF7001AB4BF /* Login + Sign Up */,
 				622669EB245C74C800E00F55 /* AppDelegate.swift */,
@@ -108,8 +115,6 @@
 				622669F6245C74CB00E00F55 /* LaunchScreen.storyboard */,
 				622669F9245C74CB00E00F55 /* Info.plist */,
 				62A0B830245CD257000272A5 /* GoogleService-Info.plist */,
-				62E12FFE245CA249001AB4BF /* HomeViewController.swift */,
-				6294178D245EABBB00D4B37A /* MainViewController.swift */,
 			);
 			path = Factilicious;
 			sourceTree = "<group>";
@@ -121,6 +126,26 @@
 				62266A02245C7D0C00E00F55 /* IntroViewClass.swift */,
 			);
 			path = "Intro Screen";
+			sourceTree = "<group>";
+		};
+		6294178F245EC36100D4B37A /* Main Scene */ = {
+			isa = PBXGroup;
+			children = (
+				6294178D245EABBB00D4B37A /* MainViewController.swift */,
+				62941790245EC37600D4B37A /* Tabs */,
+				62941795245EC68300D4B37A /* CircleCollectionViewCell.swift */,
+			);
+			path = "Main Scene";
+			sourceTree = "<group>";
+		};
+		62941790245EC37600D4B37A /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				62E12FFE245CA249001AB4BF /* SavedViewController.swift */,
+				62941791245EC3CC00D4B37A /* FactsViewController.swift */,
+				62941793245EC3DA00D4B37A /* SettingsViewController.swift */,
+			);
+			path = Tabs;
 			sourceTree = "<group>";
 		};
 		62A0B82B245CCC65000272A5 /* Helpers */ = {
@@ -263,11 +288,14 @@
 				62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */,
 				62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */,
 				622669F0245C74C800E00F55 /* IntroScreenViewController.swift in Sources */,
-				62E12FFF245CA249001AB4BF /* HomeViewController.swift in Sources */,
+				62E12FFF245CA249001AB4BF /* SavedViewController.swift in Sources */,
 				62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */,
 				62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */,
+				62941792245EC3CC00D4B37A /* FactsViewController.swift in Sources */,
 				622669EC245C74C800E00F55 /* AppDelegate.swift in Sources */,
+				62941794245EC3DA00D4B37A /* SettingsViewController.swift in Sources */,
 				62A0B82F245CCE72000272A5 /* Utilities.swift in Sources */,
+				62941796245EC68300D4B37A /* CircleCollectionViewCell.swift in Sources */,
 				622669EE245C74C800E00F55 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

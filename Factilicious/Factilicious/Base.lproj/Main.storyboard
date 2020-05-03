@@ -290,7 +290,7 @@
         <!--Facts-->
         <scene sceneID="dzo-Jf-Zom">
             <objects>
-                <viewController id="j2h-Vf-cIu" sceneMemberID="viewController">
+                <viewController id="j2h-Vf-cIu" customClass="FactsViewController" customModule="Factilicious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iPL-nP-QHf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -306,7 +306,7 @@
         <!--Settings-->
         <scene sceneID="2kO-Ng-xee">
             <objects>
-                <viewController id="peN-0n-h5t" sceneMemberID="viewController">
+                <viewController id="peN-0n-h5t" customClass="SettingsViewController" customModule="Factilicious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h2r-jR-IQf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,7 +322,7 @@
         <!--Saved-->
         <scene sceneID="FJu-9t-9ib">
             <objects>
-                <viewController id="ubT-UN-Bh8" customClass="HomeViewController" customModule="Factilicious" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ubT-UN-Bh8" customClass="SavedViewController" customModule="Factilicious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ctq-3n-oaG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
