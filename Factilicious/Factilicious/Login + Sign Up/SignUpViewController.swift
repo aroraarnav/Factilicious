@@ -14,6 +14,7 @@ class SignUpViewController: UIViewController {
     
     var ref : DatabaseReference!
     var handle : DatabaseHandle!
+    var userDefaults = UserDefaults.standard
     
     static var uid : String?
     
@@ -71,10 +72,15 @@ class SignUpViewController: UIViewController {
                     self.signUpSpinner.stopAnimating()
                     self.signUpSpinner.isHidden = true
                     // Transition to the Categories Screen
-                    self.transitionToHome()
+                    
+                    self.userDefaults.set(true, forKey: "isSignedIn")
+                    self.userDefaults.set(SignUpViewController.uid!, forKey: "userUID")
+                    
+                    self.transitionToCategories()
                     // Add the user to the database
                     SignUpViewController.uid =  result!.user.uid
-                    self.ref.child("Users").child(result!.user.uid).setValue(["Email" : email, "Name" : name])
+                    self.ref.child("Users").child(result!.user.uid).setValue(["Email" : email, "Name" : name, "Theme" : "yellow_background"])
+                    
                 }
             }
             
@@ -95,8 +101,8 @@ class SignUpViewController: UIViewController {
     }
     
     
-    func transitionToHome () {
-        performSegue(withIdentifier: "signUpSegue", sender: nil)
+    func transitionToCategories () {
+        performSegue(withIdentifier: "categoriesSegue", sender: nil)
     }
     
     // Check the fields and validate the data

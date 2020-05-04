@@ -17,11 +17,7 @@ class MainViewController: UITabBarController {
         self.selectedIndex = 1
         
         // Setting up Nav Bar
-        self.tabBarController?.navigationItem.hidesBackButton = true
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.title = "Factilicious"
-        navigationController?.navigationBar.prefersLargeTitles = false
-        
+        self.navigationController?.isNavigationBarHidden = true
     }
     
 
