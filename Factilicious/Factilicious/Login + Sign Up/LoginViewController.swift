@@ -15,8 +15,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var loginSpinner: UIActivityIndicatorView!
-    
-    var userDefaults = UserDefaults.standard
     static var uid:String?
     static var didLogin = false
     
@@ -72,8 +70,6 @@ class LoginViewController: UIViewController {
                     self.loginSpinner.isHidden = true
                     LoginViewController.didLogin = true
                     LoginViewController.uid =  result?.user.uid
-                    self.userDefaults.set(true, forKey: "isSignedIn")
-                    self.userDefaults.set(LoginViewController.uid!, forKey: "userUID")
                     self.transitionToHome ()
                 }
             }

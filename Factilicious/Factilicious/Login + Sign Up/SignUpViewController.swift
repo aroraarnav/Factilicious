@@ -14,7 +14,6 @@ class SignUpViewController: UIViewController {
     
     var ref : DatabaseReference!
     var handle : DatabaseHandle!
-    var userDefaults = UserDefaults.standard
     
     static var uid : String?
     
@@ -72,9 +71,6 @@ class SignUpViewController: UIViewController {
                     self.signUpSpinner.stopAnimating()
                     self.signUpSpinner.isHidden = true
                     // Transition to the Categories Screen
-                    
-                    self.userDefaults.set(true, forKey: "isSignedIn")
-                    self.userDefaults.set(SignUpViewController.uid!, forKey: "userUID")
                     
                     self.transitionToCategories()
                     // Add the user to the database
