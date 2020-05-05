@@ -13,6 +13,7 @@ class FactsViewController: UIViewController {
 
     @IBOutlet weak var bgView: UIView!
     
+    @IBOutlet weak var gettingFacts: UILabel!
     @IBOutlet weak var TableView: UITableView!
     @IBOutlet weak var factSpinner: UIActivityIndicatorView!
     
@@ -75,6 +76,7 @@ class FactsViewController: UIViewController {
             self.factSpinner.stopAnimating()
             self.factSpinner.isHidden = true
             self.bgView.isHidden = true
+            self.gettingFacts.isHidden = true
             })
         
     }
@@ -110,8 +112,13 @@ extension FactsViewController: UITableViewDataSource, UITableViewDelegate {
     
     @objc private func refreshFacts(_ sender: Any) {
         // Refresh Facts
+        let attributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Getting New Facts...", attributes: nil)
+        self.refreshControl.tintColor = UIColor.black
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Fetching Facts...", attributes: attributes)
+        
+        
+        
         // Reshuffle
         shuffled = shuffled.shuffled()
         

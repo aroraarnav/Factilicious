@@ -32,7 +32,7 @@ class SettingsViewController: UIViewController {
         
         handle = ref?.child("Users").child(uid!).child("Name").observe(.value, with: { (snapshot) in
             let name = snapshot.value as! String
-            self.topLabel.text = name
+            self.topLabel.text = "User: " + name.uppercased(with: nil)
             self.topLabel.layer.borderWidth = 1
             self.topLabel.layer.borderColor = self.topLabel.textColor.cgColor
             self.topLabel.layer.cornerRadius = 25

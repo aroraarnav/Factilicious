@@ -16,6 +16,9 @@
 		62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622669FF245C7BD700E00F55 /* WelcomeViewController.swift */; };
 		62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62266A02245C7D0C00E00F55 /* IntroViewClass.swift */; };
 		623B77532461296A00C893F7 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623B77522461296A00C893F7 /* SettingsTableViewController.swift */; };
+		623B7755246177C300C893F7 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623B7754246177C300C893F7 /* CheckInternet.swift */; };
+		623B775824617CAE00C893F7 /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623B775724617CAE00C893F7 /* ThemesViewController.swift */; };
+		626B94802461899A00F0A671 /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626B947F2461899A00F0A671 /* SignOutViewController.swift */; };
 		6294178E245EABBB00D4B37A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6294178D245EABBB00D4B37A /* MainViewController.swift */; };
 		62941794245EC3DA00D4B37A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62941793245EC3DA00D4B37A /* SettingsViewController.swift */; };
 		62A0B82D245CCD56000272A5 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */; };
@@ -43,6 +46,9 @@
 		622669FF245C7BD700E00F55 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		62266A02245C7D0C00E00F55 /* IntroViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewClass.swift; sourceTree = "<group>"; };
 		623B77522461296A00C893F7 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		623B7754246177C300C893F7 /* CheckInternet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
+		623B775724617CAE00C893F7 /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
+		626B947F2461899A00F0A671 /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
 		6294178D245EABBB00D4B37A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		62941793245EC3DA00D4B37A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
@@ -135,6 +141,15 @@
 			path = "Intro Screen";
 			sourceTree = "<group>";
 		};
+		623B775624617C8C00C893F7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				623B775724617CAE00C893F7 /* ThemesViewController.swift */,
+				626B947F2461899A00F0A671 /* SignOutViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		6294178F245EC36100D4B37A /* Main Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +165,7 @@
 				62E12FFE245CA249001AB4BF /* SavedViewController.swift */,
 				62941793245EC3DA00D4B37A /* SettingsViewController.swift */,
 				623B77522461296A00C893F7 /* SettingsTableViewController.swift */,
+				623B775624617C8C00C893F7 /* Settings */,
 				62FA2DA62460244800AEB759 /* Facts */,
 			);
 			path = Tabs;
@@ -160,6 +176,7 @@
 			children = (
 				62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */,
 				62A0B82E245CCE72000272A5 /* Utilities.swift */,
+				623B7754246177C300C893F7 /* CheckInternet.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -309,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62A0B82D245CCD56000272A5 /* KeyboardExtension.swift in Sources */,
+				623B7755246177C300C893F7 /* CheckInternet.swift in Sources */,
 				6294178E245EABBB00D4B37A /* MainViewController.swift in Sources */,
 				62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */,
 				62AC9CD2246042340090B7CE /* FactTableViewCell.swift in Sources */,
@@ -317,10 +335,12 @@
 				623B77532461296A00C893F7 /* SettingsTableViewController.swift in Sources */,
 				62E12FFF245CA249001AB4BF /* SavedViewController.swift in Sources */,
 				62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */,
+				626B94802461899A00F0A671 /* SignOutViewController.swift in Sources */,
 				62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */,
 				622669EC245C74C800E00F55 /* AppDelegate.swift in Sources */,
 				62941794245EC3DA00D4B37A /* SettingsViewController.swift in Sources */,
 				62A0B82F245CCE72000272A5 /* Utilities.swift in Sources */,
+				623B775824617CAE00C893F7 /* ThemesViewController.swift in Sources */,
 				622669EE245C74C800E00F55 /* SceneDelegate.swift in Sources */,
 				62AEA593245F34F6006A237D /* CategoriesViewController.swift in Sources */,
 				62AEA591245F2BBC006A237D /* FactsViewController.swift in Sources */,
