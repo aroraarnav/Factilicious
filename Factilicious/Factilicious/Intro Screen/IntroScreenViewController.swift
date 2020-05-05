@@ -27,7 +27,10 @@ class IntroScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        if userData.bool(forKey: "introCompleted") == true {
+        if userData.bool(forKey: "isSignedIn") {
+            self.performSegue(withIdentifier: "signedInSegue", sender: nil)
+        }
+        else if userData.bool(forKey: "introCompleted") == true {
             performSegue(withIdentifier: "mainSegue", sender: nil)
         }
     }

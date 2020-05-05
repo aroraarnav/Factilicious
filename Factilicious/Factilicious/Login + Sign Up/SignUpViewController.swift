@@ -16,6 +16,7 @@ class SignUpViewController: UIViewController {
     var handle : DatabaseHandle!
     
     static var uid : String?
+    var defaults = UserDefaults.standard
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -75,6 +76,10 @@ class SignUpViewController: UIViewController {
                     self.transitionToCategories()
                     // Add the user to the database
                     SignUpViewController.uid =  result!.user.uid
+                    
+                    self.defaults.set(result?.user.uid, forKey: "uid")
+                    self.defaults.set(true, forKey: "isSignedIn")
+                    
                     self.ref.child("Users").child(result!.user.uid).setValue(["Email" : email, "Name" : name, "Theme" : "yellow_background"])
                     
                 }

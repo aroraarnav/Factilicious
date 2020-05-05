@@ -15,6 +15,7 @@
 		622669F8245C74CB00E00F55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 622669F6245C74CB00E00F55 /* LaunchScreen.storyboard */; };
 		62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622669FF245C7BD700E00F55 /* WelcomeViewController.swift */; };
 		62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62266A02245C7D0C00E00F55 /* IntroViewClass.swift */; };
+		623B77532461296A00C893F7 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623B77522461296A00C893F7 /* SettingsTableViewController.swift */; };
 		6294178E245EABBB00D4B37A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6294178D245EABBB00D4B37A /* MainViewController.swift */; };
 		62941794245EC3DA00D4B37A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62941793245EC3DA00D4B37A /* SettingsViewController.swift */; };
 		62A0B82D245CCD56000272A5 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */; };
@@ -41,6 +42,7 @@
 		622669F9245C74CB00E00F55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		622669FF245C7BD700E00F55 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		62266A02245C7D0C00E00F55 /* IntroViewClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewClass.swift; sourceTree = "<group>"; };
+		623B77522461296A00C893F7 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		6294178D245EABBB00D4B37A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		62941793245EC3DA00D4B37A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				62E12FFE245CA249001AB4BF /* SavedViewController.swift */,
 				62941793245EC3DA00D4B37A /* SettingsViewController.swift */,
+				623B77522461296A00C893F7 /* SettingsTableViewController.swift */,
 				62FA2DA62460244800AEB759 /* Facts */,
 			);
 			path = Tabs;
@@ -311,6 +314,7 @@
 				62AC9CD2246042340090B7CE /* FactTableViewCell.swift in Sources */,
 				62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */,
 				622669F0245C74C800E00F55 /* IntroScreenViewController.swift in Sources */,
+				623B77532461296A00C893F7 /* SettingsTableViewController.swift in Sources */,
 				62E12FFF245CA249001AB4BF /* SavedViewController.swift in Sources */,
 				62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */,
 				62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */,

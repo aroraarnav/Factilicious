@@ -7,24 +7,38 @@
 //
 
 import UIKit
+import Firebase
 
 class SettingsViewController: UIViewController {
-
+    
+    @IBOutlet weak var topLabel: UILabel!
+    
+    var defaults = UserDefaults.standard
+    var ref: DatabaseReference?
+    var handle: DatabaseHandle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Initialise reference
+        ref = Database.database().reference()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        // Get Name from Database
+        let uid = defaults.string(forKey: "uid")
+        
+        handle = ref?.child("Users").child(uid!).child("Name").observe(.value, with: { (snapshot) in
+            let name = snapshot.value as! String
+            self.topLabel.text = name
+            self.topLabel.layer.borderWidth = 1
+            self.topLabel.layer.borderColor = self.topLabel.textColor.cgColor
+            self.topLabel.layer.cornerRadius = 25
+        })
+        
     }
-    */
+ 
 
 }

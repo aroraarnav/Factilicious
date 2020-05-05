@@ -11,49 +11,56 @@ import Firebase
 
 class FactsViewController: UIViewController {
 
+    @IBOutlet weak var bgView: UIView!
     
     @IBOutlet weak var TableView: UITableView!
+    @IBOutlet weak var factSpinner: UIActivityIndicatorView!
     
+    var fact : String!
     var shuffled = [String] ()
     var facts = [String] ()
     var categories = [String] ()
     var ref: DatabaseReference?
     var handle: DatabaseHandle?
     var defaults = UserDefaults.standard
+    private var refreshControl = UIRefreshControl()
+    
+    // Configure Control
     
     static var backgroundImage : String?
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        
+        let uid = defaults.string(forKey: "uid")
+        
         // Set the Background
         
-        if LoginViewController.didLogin {
+        handle = ref?.child("Users").child(uid!).child("Theme").observe(.value, with: { (snapshot) in
+            let theme = snapshot.value as! String
+            FactsViewController.backgroundImage = theme
+            self.TableView.backgroundView = UIImageView(image: UIImage(named: FactsViewController.backgroundImage!))
+            })
         
-        handle = ref?.child("Users").child(LoginViewController.uid!).child("Theme").observe(.value, with: { (snapshot) in
-            let theme = snapshot.value as! String
-            FactsViewController.backgroundImage = theme
-            self.TableView.backgroundView = UIImageView(image: UIImage(named: FactsViewController.backgroundImage!))
-            })
-        } else {
-        handle = ref?.child("Users").child(SignUpViewController.uid!).child("Theme").observe(.value, with: { (snapshot) in
-            let theme = snapshot.value as! String
-            FactsViewController.backgroundImage = theme
-            print (theme)
-            self.TableView.backgroundView = UIImageView(image: UIImage(named: FactsViewController.backgroundImage!))
-            })
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Implement Refresh Control
+        refreshControl = UIRefreshControl ()
+        TableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshFacts(_:)), for: .valueChanged)
+        
+        factSpinner.startAnimating()
+        let uid = defaults.string(forKey: "uid")
+        
         // Init Reference
         ref = Database.database().reference()
         
-        //Get user Categories
-        if LoginViewController.didLogin {
+        //Get user Categories and Facts
             
-            handle = ref?.child("Users").child(LoginViewController.uid!).child("Categories").child("0").observe(.childAdded, with: { (snapshot) in
+        handle = ref?.child("Users").child(uid!).child("Categories").child("0").observe(.childAdded, with: { (snapshot) in
                 let category = snapshot.value as! String
                 
                 self.handle = self.ref?.child("Facts").child(category).observe(.childAdded, with: { (facts) in
@@ -65,22 +72,11 @@ class FactsViewController: UIViewController {
                     
                 })
                 
+            self.factSpinner.stopAnimating()
+            self.factSpinner.isHidden = true
+            self.bgView.isHidden = true
             })
-        } else {
-            handle = ref?.child("Users").child(SignUpViewController.uid!).child("Categories").child("0").observe(.childAdded, with: { (snapshot) in
-                let category = snapshot.value as! String
-                self.categories.append(category)
-                
-                self.handle = self.ref?.child("Facts").child(category).observe(.childAdded, with: { (facts) in
-                    let fact = facts.value as! String
-                    self.facts.append(fact)
-                    self.shuffled = self.facts.shuffled()
-                    self.TableView.reloadData()
-                    
-                    
-                })
-            })
-        }
+        
     }
     
     
@@ -97,16 +93,12 @@ extension FactsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FactTableViewCell") as! FactTableViewCell
         cell.selectionStyle = .none
-        cell.factLabel.text = shuffled [indexPath.row]
+        // Set the delegate
         
-        if FactsViewController.backgroundImage == "red_background_color" {
-            cell.factLabel.textColor = UIColor.white
-        } else if FactsViewController.backgroundImage == "blue_background_color" {
-            cell.factLabel.textColor = UIColor.white
-            // Change Color of Buttons
-        } else {
-            cell.factLabel.textColor = UIColor.black
-        }
+        cell.delegate = self
+        
+        cell.factLabel.text = shuffled [indexPath.row]
+        fact = shuffled [indexPath.row]
         
         return cell
     }
@@ -115,5 +107,38 @@ extension FactsViewController: UITableViewDataSource, UITableViewDelegate {
         return 250
         
     }
+    
+    @objc private func refreshFacts(_ sender: Any) {
+        // Refresh Facts
+        
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Getting New Facts...", attributes: nil)
+        // Reshuffle
+        shuffled = shuffled.shuffled()
+        
+        TableView.reloadData()
+        
+        let when = DispatchTime.now() + 1 // change to desired number of seconds
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            self.refreshControl.endRefreshing()
+        }
+    }
+}
+
+extension FactsViewController: FactCellDelegate {
+    func didTapSave(fact: String) {
+        
+    }
+    
+    func didTapShare(fact: String) {
+        // Instantiate Share View Controller
+        let shareString = "Today, I got to know about this cool fact on the Factilicious App!\n\n " + fact as Any
+        let shareVC = UIActivityViewController (activityItems: [shareString], applicationActivities: nil)
+        shareVC.popoverPresentationController?.sourceView = self.view
+        
+        // Present it
+        self.present(shareVC, animated: true, completion: nil)
+    }
+    
+    
     
 }

@@ -10,6 +10,9 @@ import UIKit
 import Firebase
 
 class CategoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var defaults = UserDefaults.standard
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataModel.count
     }
@@ -78,7 +81,8 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
         } else {
             
             // Store Preferences in Database
-        ref?.child("Users").child(SignUpViewController.uid!).child("Categories").setValue([CategoriesViewController.userCategories])
+            let uid = defaults.string(forKey: "uid")
+        ref?.child("Users").child(uid!).child("Categories").setValue([CategoriesViewController.userCategories])
             // Transition To Home Screen
             
             self.performSegue(withIdentifier: "signUpSegue", sender: nil)
