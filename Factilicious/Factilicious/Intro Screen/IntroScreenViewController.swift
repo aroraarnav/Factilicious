@@ -14,10 +14,17 @@ class IntroScreenViewController: UIViewController {
 
     // Outlets
     @IBOutlet weak var getStartedButton: UIButton!
+    @IBOutlet weak var loaderView: UIView!
     @IBOutlet weak var introView: IntroViewClass!
     
+    var notificationPublisher = NotificationPublisher()
     
     // Handle the User defaults
+    var randInt: Int?
+    var ref: DatabaseReference?
+    var handle: DatabaseHandle?
+    static var shuffledFacts = [String?] ()
+    var notiFacts  = [String] ()
     var userData = UserDefaults.standard
     
     
@@ -27,20 +34,60 @@ class IntroScreenViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        IntroScreenViewController.shuffledFacts = [String] ()
+        // Set it up
+        // // // // // // // // // // //
+        handle = ref?.child("Facts").child("General").observe(.childAdded, with: { (snapshot) in
+            
+            
+            let fact = snapshot.value as? String
+            self.notiFacts.append(fact!)
+            IntroScreenViewController.shuffledFacts = self.notiFacts.shuffled()
+            print (IntroScreenViewController.shuffledFacts)
+            self.randInt = Int.random(in: 0...IntroScreenViewController.shuffledFacts.count - 1)
+            
+            
+            
+            if self.userData.bool(forKey: "isSignedIn") {
+                
+                self.performSegue(withIdentifier: "signedInSegue", sender: nil)
+            }
+            else if self.userData.bool(forKey: "introCompleted") == true {
+                self.performSegue(withIdentifier: "mainSegue", sender: nil)
+                
+                
+            }
+            
+            self.loaderView.isHidden = true
+        })
         
-        if userData.bool(forKey: "isSignedIn") {
-            self.performSegue(withIdentifier: "signedInSegue", sender: nil)
-        }
-        else if userData.bool(forKey: "introCompleted") == true {
-            performSegue(withIdentifier: "mainSegue", sender: nil)
-        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loaderView.isHidden = false
+        
+        // Set Up Notifications
+        ref = Database.database().reference()
+        
+        let notiTime = userData.integer(forKey: "notiTime")
+        
+        if notiTime == 0 {
+            userData.set(1800, forKey: "notiTime")
+            
+        }
+        
+        if userData.string(forKey: "already") == nil {
+            userData.set("false" , forKey: "already")
+            print ("nibba" + userData.string(forKey: "already")!)
+        }
+        
+    
+        
         let notificationCenter = NotificationCenter.default
         
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(appTerminated), name: UIApplication.didFinishLaunchingNotification, object: nil)
         
         introView.dataSource = self
         introView.delegate = self
@@ -53,7 +100,12 @@ class IntroScreenViewController: UIViewController {
         getStartedButton.layer.borderWidth = 3.0
     }
 
+    @objc func appTerminated () {
+
+    }
     @objc func appMovedToBackground() {
+        
+        UIApplication.shared.applicationIconBadgeNumber = 0
         print("App moved to background!")
         do {
             try Auth.auth().signOut()
@@ -61,7 +113,18 @@ class IntroScreenViewController: UIViewController {
         } catch let err {
             print (err)
         }
+        IntroScreenViewController.shuffledFacts.shuffle()
+        let isIndexValid = IntroScreenViewController.shuffledFacts.indices.contains(0)
+        
+        if isIndexValid {
+            self.notificationPublisher.sendNotification(title: "New Fact!", subtitle: "", body: IntroScreenViewController.shuffledFacts[0]!, badge: 1, delayInterval: 1800)
+        } else {
+            self.notificationPublisher.sendNotification(title: "New Fact!", subtitle: "", body: "Canadians say “sorry” so much that a law was passed in 2009 declaring that an apology can’t be used as evidence of admission to guilt.", badge: 1, delayInterval: 1800)
+            
+        }
+        
     }
+    
 }
 
 extension IntroScreenViewController: PaperOnboardingDelegate, PaperOnboardingDataSource {

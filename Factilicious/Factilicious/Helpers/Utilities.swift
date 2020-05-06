@@ -28,7 +28,7 @@ class Utilities {
             // Add the line to the text field
             textfield.layer.addSublayer(bottomLine)
         } else {
-            bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: textfield.frame.width, height: 2)
+            bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: textfield.frame.width + 20, height: 2)
             
             bottomLine.backgroundColor = UIColor.init(red: 255/255, green: 0/255, blue: 0/255, alpha: 1).cgColor
             
@@ -46,16 +46,30 @@ class Utilities {
         
         // Create the bottom line
         let bottomLine = CALayer()
+        let name = UIDevice.current.name
         
-        bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: textfield.frame.width, height: 2)
+        if name == "iPhone 8" || name == "iPhone 8 Plus" || name == "iPhone 7" || name == "iPhone 7 Plus" || name == "iPhone 6" || name == "iPhone 6s" || name == "iPhone 6 Plus" || name == "iPhone 6s Plus" || name == "iPhone 5" || name == "iPhone 5s" || name == "iPhone SE"{
+            bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: 300, height: 2)
+            
+            bottomLine.backgroundColor = UIColor.init(red: 0/255, green: 122/255, blue: 255/255, alpha: 1).cgColor
+            
+            // Remove border on text field
+            textfield.borderStyle = .none
+            
+            // Add the line to the text field
+            textfield.layer.addSublayer(bottomLine)
+        } else {
+            bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: textfield.frame.width + 20, height: 2)
+            
+            bottomLine.backgroundColor = UIColor.init(red: 0/255, green: 122/255, blue: 255/255, alpha: 1).cgColor
+            
+            // Remove border on text field
+            textfield.borderStyle = .none
+            
+            // Add the line to the text field
+            textfield.layer.addSublayer(bottomLine)
+        }
         
-        bottomLine.backgroundColor = UIColor.init(red: 0/255, green: 122/255, blue: 255/255, alpha: 1).cgColor
-        
-        // Remove border on text field
-        textfield.borderStyle = .none
-        
-        // Add the line to the text field
-        textfield.layer.addSublayer(bottomLine)
         
     }
     

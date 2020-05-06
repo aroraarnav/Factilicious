@@ -58,6 +58,9 @@ class SavedViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        
+        noneView.backgroundColor = UIColor(patternImage: UIImage(named: FactsViewController.backgroundImage!)!)
+        
         // Bg
         self.tableView.backgroundView = UIImageView(image: UIImage(named: FactsViewController.backgroundImage!))
         handle = ref?.child("Users").child(uid).child("Saved").observe(.childAdded, with: { (snapshot) in

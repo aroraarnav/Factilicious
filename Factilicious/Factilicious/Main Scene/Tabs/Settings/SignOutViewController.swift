@@ -17,6 +17,7 @@ class SignOutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationPublisher.defaults.set("true", forKey: "already")
         spinner.startAnimating()
         defaults.set(false, forKey: "isSignedIn")
         

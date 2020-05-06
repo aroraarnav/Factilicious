@@ -24,6 +24,7 @@ class ThemesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationPublisher.defaults.set("true", forKey: "already")
         // Init uid
         uid = defaults.string(forKey: "uid")
         // Init ref

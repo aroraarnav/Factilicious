@@ -22,6 +22,7 @@ class ChangeNameViewController: UIViewController, UITextFieldDelegate {
     let name = FactsViewController.name
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationPublisher.defaults.set("true", forKey: "already")
         nameTextField.delegate = self
         hideKeyboardWhenTappedAround()
         uid = defaults.string(forKey: "uid")

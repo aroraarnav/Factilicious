@@ -22,6 +22,7 @@ class ChangeCatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationPublisher.defaults.set("true", forKey: "already")
         label.isHidden = true
         success.isHidden = true
         

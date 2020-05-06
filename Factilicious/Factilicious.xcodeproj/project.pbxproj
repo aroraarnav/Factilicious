@@ -21,6 +21,7 @@
 		626B94802461899A00F0A671 /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626B947F2461899A00F0A671 /* SignOutViewController.swift */; };
 		626B94842461CB4300F0A671 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626B94832461CB4300F0A671 /* MailViewController.swift */; };
 		626B94862461DED700F0A671 /* ChangeCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626B94852461DED700F0A671 /* ChangeCatViewController.swift */; };
+		629111172463089A00136C9B /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629111162463089A00136C9B /* Notification.swift */; };
 		6294178E245EABBB00D4B37A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6294178D245EABBB00D4B37A /* MainViewController.swift */; };
 		62941794245EC3DA00D4B37A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62941793245EC3DA00D4B37A /* SettingsViewController.swift */; };
 		62A0B82D245CCD56000272A5 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */; };
@@ -56,6 +57,7 @@
 		626B947F2461899A00F0A671 /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
 		626B94832461CB4300F0A671 /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
 		626B94852461DED700F0A671 /* ChangeCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCatViewController.swift; sourceTree = "<group>"; };
+		629111162463089A00136C9B /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		6294178D245EABBB00D4B37A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		62941793245EC3DA00D4B37A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				622669F6245C74CB00E00F55 /* LaunchScreen.storyboard */,
 				622669F9245C74CB00E00F55 /* Info.plist */,
 				62A0B830245CD257000272A5 /* GoogleService-Info.plist */,
+				629111162463089A00136C9B /* Notification.swift */,
 			);
 			path = Factilicious;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				622669EC245C74C800E00F55 /* AppDelegate.swift in Sources */,
 				62941794245EC3DA00D4B37A /* SettingsViewController.swift in Sources */,
 				62A0B82F245CCE72000272A5 /* Utilities.swift in Sources */,
+				629111172463089A00136C9B /* Notification.swift in Sources */,
 				623B775824617CAE00C893F7 /* ThemesViewController.swift in Sources */,
 				622669EE245C74C800E00F55 /* SceneDelegate.swift in Sources */,
 				62AEA593245F34F6006A237D /* CategoriesViewController.swift in Sources */,

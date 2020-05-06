@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 
 class FactsViewController: UIViewController {
+    
+    
 
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var refresh: UIButton!
@@ -27,6 +29,7 @@ class FactsViewController: UIViewController {
     var handle: DatabaseHandle?
     var defaults = UserDefaults.standard
     private var refreshControl = UIRefreshControl()
+    var random = Int.random(in: 0...IntroScreenViewController.shuffledFacts.count - 1)
     
     // Configure Control
     
@@ -50,14 +53,20 @@ class FactsViewController: UIViewController {
         
         handle = ref?.child("Users").child(uid!).child("Theme").observe(.value, with: { (snapshot) in
             let theme = snapshot.value as! String
+            
             FactsViewController.backgroundImage = theme
             self.TableView.backgroundView = UIImageView(image: UIImage(named: FactsViewController.backgroundImage!))
+            
             })
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        
+        refresh.isHidden = true
+        factSpinner.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         
         // Implement Refresh Control
         refreshControl = UIRefreshControl ()
@@ -90,6 +99,7 @@ class FactsViewController: UIViewController {
             self.bgView.isHidden = true
             self.gettingFacts.isHidden = true
             self.tabBarController?.tabBar.isHidden = false
+            self.refresh.isHidden = false
             
             // Refresh to prevent White
             self.refreshFacts(self)
@@ -98,16 +108,18 @@ class FactsViewController: UIViewController {
     }
 
     @IBAction func refresh(_ sender: Any) {
+        
         // Rotate the button
         UIView.animate(withDuration: 0.5) { () -> Void in
           self.refresh.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        self.refresh.transform = CGAffineTransform(scaleX: 2,y: 2)
         }
 
         UIView.animate(withDuration: 0.5, delay: 0.25, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
           self.refresh.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2.0)
         }, completion: nil)
         
-        self.refresh.transform = .identity
+        // self.refresh.transform = .identity
         
         refreshFacts(self)
         
