@@ -12,15 +12,15 @@
             <objects>
                 <viewController storyboardIdentifier="IntroBoard" id="BYZ-38-t0r" customClass="IntroScreenViewController" customModule="Factilicious" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="And-x0-4Lf" customClass="IntroViewClass" customModule="Factilicious" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atT-K7-sHt">
-                                <rect key="frame" x="40" y="424" width="295" height="60"/>
+                                <rect key="frame" x="40" y="444" width="295" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Y12-VV-NXI"/>
                                 </constraints>
@@ -34,10 +34,10 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGd-AG-2Su">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="E3T-T4-ZDu">
-                                        <rect key="frame" x="169" y="258.5" width="37" height="37"/>
+                                        <rect key="frame" x="169" y="268.5" width="37" height="37"/>
                                     </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -65,6 +65,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="rIW-ff-WjS"/>
                     <connections>
+                        <outlet property="factSpinner" destination="E3T-T4-ZDu" id="4qd-Nh-H7A"/>
                         <outlet property="getStartedButton" destination="atT-K7-sHt" id="MU8-xx-vbN"/>
                         <outlet property="introView" destination="And-x0-4Lf" id="Azh-bp-fCe"/>
                         <outlet property="loaderView" destination="vGd-AG-2Su" id="7h1-ao-K1S"/>
@@ -370,17 +371,11 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="574"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LKN-n2-FY9">
-                                        <rect key="frame" x="20" y="238" width="335" height="98"/>
+                                        <rect key="frame" x="20" y="268.5" width="335" height="37"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="b7J-Zf-yUn">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="37"/>
                                             </activityIndicatorView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting Facts..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SU2-jp-Qfa">
-                                                <rect key="frame" x="0.0" y="57" width="335" height="41"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -423,7 +418,6 @@
                         <outlet property="TableView" destination="y9S-aD-G98" id="sCL-S6-8rH"/>
                         <outlet property="bgView" destination="hvW-rJ-uW7" id="997-pN-VeF"/>
                         <outlet property="factSpinner" destination="b7J-Zf-yUn" id="ZYy-Up-SJy"/>
-                        <outlet property="gettingFacts" destination="SU2-jp-Qfa" id="qrL-Fb-VxC"/>
                         <outlet property="refresh" destination="r0l-w8-k9A" id="Gwq-l7-tiX"/>
                     </connections>
                 </viewController>
@@ -535,6 +529,9 @@
                                                     <rect key="frame" x="20" y="6" width="335" height="38"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
                                                     <state key="normal" title="Notifications"/>
+                                                    <connections>
+                                                        <segue destination="bf7-HC-VRW" kind="presentation" id="CFk-xt-aBF"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1108,6 +1105,84 @@ Your name is visible to us only when you give us feedback or suggest facts.</str
             </objects>
             <point key="canvasLocation" x="7814" y="49"/>
         </scene>
+        <!--Notifications View Controller-->
+        <scene sceneID="QkF-Mx-vtF">
+            <objects>
+                <viewController id="bf7-HC-VRW" customClass="NotificationsViewController" customModule="Factilicious" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bha-gB-ihd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5vS-Yd-wUf">
+                                <rect key="frame" x="20" y="20" width="335" height="31.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFp-4d-3k5">
+                                <rect key="frame" x="20" y="20" width="43" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="bf7-HC-VRW" eventType="touchUpInside" id="4Jl-7D-key"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiY-sP-iz3">
+                                <rect key="frame" x="20" y="208.5" width="335" height="137"/>
+                                <string key="text">If notifications are enabled, Factilicious delivers amazing facts to you regularly. If you want to enable or disable this configuration, please visit Settings.</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <string key="userLabel">If notifications are enabled, Factilicious delivers amazing facts to you regularly. If you want to enable or disable this configuration, please visit Settings.</string>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJu-Qe-EfE">
+                                <rect key="frame" x="20" y="464" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kcc-xP-WFX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Take Me To Settings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingsPressed:" destination="bf7-HC-VRW" eventType="touchUpInside" id="cM1-qM-FEd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIG-Wy-Pga">
+                                <rect key="frame" x="20" y="156.5" width="335" height="22"/>
+                                <state key="normal" image="bell.fill" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5vS-Yd-wUf" secondAttribute="trailing" constant="20" id="0zF-Y0-JrN"/>
+                            <constraint firstItem="KlD-Wx-uqt" firstAttribute="bottom" secondItem="EJu-Qe-EfE" secondAttribute="bottom" constant="40" id="JuX-kM-R6L"/>
+                            <constraint firstItem="KlD-Wx-uqt" firstAttribute="trailing" secondItem="EJu-Qe-EfE" secondAttribute="trailing" constant="20" id="R0p-pL-ipq"/>
+                            <constraint firstItem="XiY-sP-iz3" firstAttribute="centerY" secondItem="Bha-gB-ihd" secondAttribute="centerY" id="ULI-Wn-cs7"/>
+                            <constraint firstItem="JIG-Wy-Pga" firstAttribute="leading" secondItem="KlD-Wx-uqt" secondAttribute="leading" constant="20" id="VcB-8y-w5D"/>
+                            <constraint firstItem="eFp-4d-3k5" firstAttribute="leading" secondItem="KlD-Wx-uqt" secondAttribute="leading" constant="20" id="bLQ-iF-9Ac"/>
+                            <constraint firstItem="XiY-sP-iz3" firstAttribute="leading" secondItem="KlD-Wx-uqt" secondAttribute="leading" constant="20" id="de5-Ky-tsT"/>
+                            <constraint firstItem="KlD-Wx-uqt" firstAttribute="trailing" secondItem="JIG-Wy-Pga" secondAttribute="trailing" constant="20" id="dxM-lA-WRs"/>
+                            <constraint firstItem="XiY-sP-iz3" firstAttribute="top" secondItem="JIG-Wy-Pga" secondAttribute="bottom" constant="30" id="gI4-5y-G96"/>
+                            <constraint firstItem="5vS-Yd-wUf" firstAttribute="top" secondItem="KlD-Wx-uqt" secondAttribute="top" constant="20" id="jG0-n7-c5k"/>
+                            <constraint firstItem="EJu-Qe-EfE" firstAttribute="leading" secondItem="KlD-Wx-uqt" secondAttribute="leading" constant="20" id="kkG-fp-BeZ"/>
+                            <constraint firstItem="5vS-Yd-wUf" firstAttribute="leading" secondItem="KlD-Wx-uqt" secondAttribute="leading" constant="20" id="lOq-sZ-mHQ"/>
+                            <constraint firstItem="KlD-Wx-uqt" firstAttribute="trailing" secondItem="XiY-sP-iz3" secondAttribute="trailing" constant="20" id="uka-qA-S6q"/>
+                            <constraint firstItem="eFp-4d-3k5" firstAttribute="top" secondItem="KlD-Wx-uqt" secondAttribute="top" constant="20" id="yaO-us-Chk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KlD-Wx-uqt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Faq-a3-XqX"/>
+                    <connections>
+                        <outlet property="notiBell" destination="JIG-Wy-Pga" id="v1w-Vd-nAV"/>
+                        <outlet property="settings" destination="EJu-Qe-EfE" id="OOk-vo-Tyo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2H-Le-7ro" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9121" y="222"/>
+        </scene>
         <!--Suggest View Controller-->
         <scene sceneID="tyw-mz-a63">
             <objects>
@@ -1622,6 +1697,7 @@ Your name is visible to us only when you give us feedback or suggest facts.</str
     </scenes>
     <resources>
         <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+        <image name="bell.fill" catalog="system" width="64" height="62"/>
         <image name="blue_background" width="736" height="1308"/>
         <image name="empty-heart" width="2000" height="1891"/>
         <image name="gear" catalog="system" width="64" height="58"/>
@@ -1639,6 +1715,6 @@ Your name is visible to us only when you give us feedback or suggest facts.</str
     <inferredMetricsTieBreakers>
         <segue reference="tsC-6G-ibl"/>
         <segue reference="8tI-ko-9Uq"/>
-        <segue reference="D7j-YW-xNC"/>
+        <segue reference="bOr-zu-Wo7"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -14,7 +14,7 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let notificationPublisher = NotificationPublisher ()
-    private func requestNotifications (application: UIApplication) {
+    /* private func requestNotifications (application: UIApplication) {
         
         let center = UNUserNotificationCenter.current()
         let options: UNAuthorizationOptions = [.alert, .badge, .sound]
@@ -30,13 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-    }
+    } */
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
-        requestNotifications(application: application)
+        // requestNotifications(application: application)
         return true
     }
 

@@ -49,7 +49,7 @@ class Utilities {
         let name = UIDevice.current.name
         
         if name == "iPhone 8" || name == "iPhone 8 Plus" || name == "iPhone 7" || name == "iPhone 7 Plus" || name == "iPhone 6" || name == "iPhone 6s" || name == "iPhone 6 Plus" || name == "iPhone 6s Plus" || name == "iPhone 5" || name == "iPhone 5s" || name == "iPhone SE"{
-            bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: 300, height: 2)
+            bottomLine.frame = CGRect(x: 0, y: textfield.frame.height - 2, width: 340, height: 2)
             
             bottomLine.backgroundColor = UIColor.init(red: 0/255, green: 122/255, blue: 255/255, alpha: 1).cgColor
             

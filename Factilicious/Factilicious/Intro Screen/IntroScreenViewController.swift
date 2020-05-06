@@ -12,12 +12,29 @@ import Firebase
 
 class IntroScreenViewController: UIViewController {
 
+    let notificationPublisher = NotificationPublisher ()
+    
+    private func requestNotifications () {
+        
+        let center = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+        
+        
+        
+        center.requestAuthorization(options: options) { (granted, error) in
+            if let error = error {
+                print (error.localizedDescription)
+            }
+            
+        }
+        
+        
+        
+    }
     // Outlets
     @IBOutlet weak var getStartedButton: UIButton!
     @IBOutlet weak var loaderView: UIView!
     @IBOutlet weak var introView: IntroViewClass!
-    
-    var notificationPublisher = NotificationPublisher()
     
     // Handle the User defaults
     var randInt: Int?
@@ -27,9 +44,11 @@ class IntroScreenViewController: UIViewController {
     var notiFacts  = [String] ()
     var userData = UserDefaults.standard
     
+    @IBOutlet weak var factSpinner: UIActivityIndicatorView!
     
     @IBAction func getStartedPressed(_ sender: Any) {
         userData.set(true, forKey: "introCompleted")
+        requestNotifications ()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -65,6 +84,7 @@ class IntroScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        factSpinner.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         loaderView.isHidden = false
         
         // Set Up Notifications
@@ -169,9 +189,9 @@ extension IntroScreenViewController: PaperOnboardingDelegate, PaperOnboardingDat
         
         return [OnboardingItemInfo (informationImage: logo!, title: "Welcome To Factilicious", description: "Factilicious is the ultimate Fun Facts App! \n You can discover over 1000 amazing facts with this app. Save the facts you most like \n and show your friends!", pageIcon: icon!, color: bgTwo, titleColor: #colorLiteral(red: 0.8552109772, green: 0.07433366693, blue: 0.1143855852, alpha: 0.8505993151), descriptionColor: UIColor.black, titleFont: titleFont!, descriptionFont: descFont!),
                 
-                OnboardingItemInfo (informationImage: bell!, title: "New Fact Every Day", description: "You will get a new amazing fact every day with Factilicious. Simply allow Notifications and experience the magic!", pageIcon: icon!, color: bgOne, titleColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), descriptionColor: UIColor.white, titleFont: titleFont!, descriptionFont: descFont!),
+                OnboardingItemInfo (informationImage: bell!, title: "Get Notifications Regularly", description: "Get an amazing fact delivered to you regularly. Simply allow Notifications and experience the magic!", pageIcon: icon!, color: bgOne, titleColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), descriptionColor: UIColor.white, titleFont: titleFont!, descriptionFont: descFont!),
                 
-                OnboardingItemInfo (informationImage: share!, title: "Share Facts Easily", description: "Factilicious allows you to share any fact you found with your family and friends, with a click of a button.", pageIcon: icon!, color: bgThree, titleColor: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), descriptionColor: UIColor.black, titleFont: titleFont!, descriptionFont: descFont!),
+                OnboardingItemInfo (informationImage: share!, title: "Share Facts Easily", description: "Factilicious allows you to share any fact you like with your family and friends, with a tap of a button.", pageIcon: icon!, color: bgThree, titleColor: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), descriptionColor: UIColor.black, titleFont: titleFont!, descriptionFont: descFont!),
             ] [index]
     }
     

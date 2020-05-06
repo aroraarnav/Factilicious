@@ -27,6 +27,7 @@
 		62A0B82D245CCD56000272A5 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */; };
 		62A0B82F245CCE72000272A5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82E245CCE72000272A5 /* Utilities.swift */; };
 		62A0B831245CD257000272A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62A0B830245CD257000272A5 /* GoogleService-Info.plist */; };
+		62A8B1392463582A00D2ED1C /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A8B1382463582A00D2ED1C /* NotificationsViewController.swift */; };
 		62AC9CD2246042340090B7CE /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC9CD1246042340090B7CE /* FactTableViewCell.swift */; };
 		62AD4E882462A56200096484 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AD4E872462A56200096484 /* SavedTableViewCell.swift */; };
 		62AEA591245F2BBC006A237D /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AEA590245F2BBC006A237D /* FactsViewController.swift */; };
@@ -63,6 +64,7 @@
 		62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
 		62A0B82E245CCE72000272A5 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		62A0B830245CD257000272A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		62A8B1382463582A00D2ED1C /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		62AC9CD1246042340090B7CE /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
 		62AD4E872462A56200096484 /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewCell.swift; sourceTree = "<group>"; };
 		62AEA590245F2BBC006A237D /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				626B94852461DED700F0A671 /* ChangeCatViewController.swift */,
 				62FD37672462DE5500653BD1 /* SuggestViewController.swift */,
 				62FD37692462E24A00653BD1 /* ChangeNameViewController.swift */,
+				62A8B1382463582A00D2ED1C /* NotificationsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				626B94802461899A00F0A671 /* SignOutViewController.swift in Sources */,
 				62266A00245C7BD700E00F55 /* WelcomeViewController.swift in Sources */,
 				622669EC245C74C800E00F55 /* AppDelegate.swift in Sources */,
+				62A8B1392463582A00D2ED1C /* NotificationsViewController.swift in Sources */,
 				62941794245EC3DA00D4B37A /* SettingsViewController.swift in Sources */,
 				62A0B82F245CCE72000272A5 /* Utilities.swift in Sources */,
 				629111172463089A00136C9B /* Notification.swift in Sources */,
