@@ -1,15 +1,16 @@
 //
-//  MailViewController.swift
+//  SuggestViewController.swift
 //  Factilicious
 //
-//  Created by Arnav Arora on 05/05/20.
+//  Created by Arnav Arora on 06/05/20.
 //  Copyright © 2020 Jayant Arora. All rights reserved.
 //
 
 import UIKit
 import MessageUI
 
-class MailViewController: UIViewController {
+class SuggestViewController: UIViewController {
+    
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var statusLabel: UILabel!
     
@@ -36,9 +37,9 @@ class MailViewController: UIViewController {
         
         let composer = MFMailComposeViewController ()
         composer.mailComposeDelegate = self
-        composer.setSubject("Feedback")
+        composer.setSubject("I Know Something Cool!")
         composer.setToRecipients(["aroraarnav2005@gmail.com"])
-        composer.setMessageBody("Here is my feedback for the Factilicious App:", isHTML: false)
+        composer.setMessageBody("Here is the fact I would like to share:", isHTML: false)
         
         present(composer, animated: true, completion: nil)
     }
@@ -48,7 +49,7 @@ class MailViewController: UIViewController {
     }
 }
 
-extension MailViewController: MFMailComposeViewControllerDelegate {
+extension SuggestViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         if let _ = error {
             

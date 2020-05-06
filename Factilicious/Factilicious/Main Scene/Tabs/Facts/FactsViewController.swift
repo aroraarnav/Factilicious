@@ -12,12 +12,12 @@ import Firebase
 class FactsViewController: UIViewController {
 
     @IBOutlet weak var bgView: UIView!
-    
+    @IBOutlet weak var refresh: UIButton!
     @IBOutlet weak var gettingFacts: UILabel!
     @IBOutlet weak var TableView: UITableView!
     @IBOutlet weak var factSpinner: UIActivityIndicatorView!
     
-    
+    static var name: String?
     var uidUser : String?
     var fact : String!
     var shuffled = [String] ()
@@ -38,6 +38,10 @@ class FactsViewController: UIViewController {
         let uid = defaults.string(forKey: "uid")
         uidUser = uid
         
+        // Get the name
+        handle = ref?.child("Users").child(uid!).child("Name").observe(.value, with: { (snapshot) in
+            FactsViewController.name = snapshot.value as? String
+        })
         // Set the Background
         
         handle = ref?.child("Users").child(uid!).child("Theme").observe(.value, with: { (snapshot) in
@@ -51,12 +55,16 @@ class FactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Refresh to prevent White
+        refreshFacts(self)
+        
         // Implement Refresh Control
         refreshControl = UIRefreshControl ()
         TableView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refreshFacts(_:)), for: .valueChanged)
         
         factSpinner.startAnimating()
+        self.tabBarController?.tabBar.isHidden = true
         let uid = defaults.string(forKey: "uid")
         
         // Init Reference
@@ -80,12 +88,26 @@ class FactsViewController: UIViewController {
             self.factSpinner.isHidden = true
             self.bgView.isHidden = true
             self.gettingFacts.isHidden = true
+            self.tabBarController?.tabBar.isHidden = false
             })
         
     }
-    
-    
-    
+
+    @IBAction func refresh(_ sender: Any) {
+        // Rotate the button
+        UIView.animate(withDuration: 0.5) { () -> Void in
+          self.refresh.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        }
+
+        UIView.animate(withDuration: 0.5, delay: 0.25, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
+          self.refresh.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2.0)
+        }, completion: nil)
+        
+        self.refresh.transform = .identity
+        
+        refreshFacts(self)
+        
+    }
 }
     
 
@@ -113,12 +135,11 @@ extension FactsViewController: UITableViewDataSource, UITableViewDelegate {
         
     }
     
-    @objc private func refreshFacts(_ sender: Any) {
+    @objc func refreshFacts(_ sender: Any) {
         // Refresh Facts
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        
         self.refreshControl.tintColor = UIColor.black
-        self.refreshControl.attributedTitle = NSAttributedString(string: "Fetching Facts...", attributes: attributes)
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Mixing It Up...", attributes: attributes)
         
         
         

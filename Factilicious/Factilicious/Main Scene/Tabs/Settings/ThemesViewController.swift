@@ -15,6 +15,7 @@ class ThemesViewController: UIViewController {
     var defaults = UserDefaults.standard
     var uid: String?
     
+    @IBOutlet weak var rainbowTheme: UIButton!
     @IBOutlet weak var yellowTheme: UIButton!
     @IBOutlet weak var pinkTheme: UIButton!
     @IBOutlet weak var turquoiseTheme: UIButton!
@@ -28,6 +29,7 @@ class ThemesViewController: UIViewController {
         // Init ref
         ref = Database.database().reference()
         // Corner Radii
+        rainbowTheme.layer.cornerRadius = 30
         yellowTheme.layer.cornerRadius = 30
         turquoiseTheme.layer.cornerRadius = 30
         pinkTheme.layer.cornerRadius = 30
@@ -80,6 +82,14 @@ class ThemesViewController: UIViewController {
     @IBAction func greenPressed(_ sender: Any) {
         if CheckInternet.Connection() {
             ref?.child("Users").child(uid!).child("Theme").setValue("green_background")
+            self.performSegue(withIdentifier: "themeSegue", sender: nil)
+        } else {
+            
+        }
+    }
+    @IBAction func rainbowPressed(_ sender: Any) {
+        if CheckInternet.Connection() {
+            ref?.child("Users").child(uid!).child("Theme").setValue("rainbow_background")
             self.performSegue(withIdentifier: "themeSegue", sender: nil)
         } else {
             

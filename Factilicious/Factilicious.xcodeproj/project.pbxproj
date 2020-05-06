@@ -27,12 +27,14 @@
 		62A0B82F245CCE72000272A5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82E245CCE72000272A5 /* Utilities.swift */; };
 		62A0B831245CD257000272A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62A0B830245CD257000272A5 /* GoogleService-Info.plist */; };
 		62AC9CD2246042340090B7CE /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC9CD1246042340090B7CE /* FactTableViewCell.swift */; };
+		62AD4E882462A56200096484 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AD4E872462A56200096484 /* SavedTableViewCell.swift */; };
 		62AEA591245F2BBC006A237D /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AEA590245F2BBC006A237D /* FactsViewController.swift */; };
 		62AEA593245F34F6006A237D /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AEA592245F34F6006A237D /* CategoriesViewController.swift */; };
 		62AEA596245F3938006A237D /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AEA595245F3938006A237D /* CategoriesTableViewCell.swift */; };
 		62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFA245CA22C001AB4BF /* LoginViewController.swift */; };
 		62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */; };
 		62E12FFF245CA249001AB4BF /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFE245CA249001AB4BF /* SavedViewController.swift */; };
+		62FD37682462DE5500653BD1 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD37672462DE5500653BD1 /* SuggestViewController.swift */; };
 		DCE97A09DAA336210D618FB3 /* Pods_Factilicious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56BE13E8A6BE9AFA6463549 /* Pods_Factilicious.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,12 +61,14 @@
 		62A0B82E245CCE72000272A5 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		62A0B830245CD257000272A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62AC9CD1246042340090B7CE /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
+		62AD4E872462A56200096484 /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewCell.swift; sourceTree = "<group>"; };
 		62AEA590245F2BBC006A237D /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewController.swift; sourceTree = "<group>"; };
 		62AEA592245F34F6006A237D /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		62AEA595245F3938006A237D /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		62E12FFA245CA22C001AB4BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		62E12FFE245CA249001AB4BF /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		62FD37672462DE5500653BD1 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
 		C56BE13E8A6BE9AFA6463549 /* Pods_Factilicious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Factilicious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6691953CCD816BDB7960D6E /* Pods-Factilicious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Factilicious.release.xcconfig"; path = "Target Support Files/Pods-Factilicious/Pods-Factilicious.release.xcconfig"; sourceTree = "<group>"; };
 		FD9C85A83E0302F65844898B /* Pods-Factilicious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Factilicious.debug.xcconfig"; path = "Target Support Files/Pods-Factilicious/Pods-Factilicious.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				626B947F2461899A00F0A671 /* SignOutViewController.swift */,
 				626B94832461CB4300F0A671 /* MailViewController.swift */,
 				626B94852461DED700F0A671 /* ChangeCatViewController.swift */,
+				62FD37672462DE5500653BD1 /* SuggestViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -168,7 +173,7 @@
 		62941790245EC37600D4B37A /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
-				62E12FFE245CA249001AB4BF /* SavedViewController.swift */,
+				62AD4E862462A52C00096484 /* Saved */,
 				62941793245EC3DA00D4B37A /* SettingsViewController.swift */,
 				623B77522461296A00C893F7 /* SettingsTableViewController.swift */,
 				623B775624617C8C00C893F7 /* Settings */,
@@ -185,6 +190,15 @@
 				623B7754246177C300C893F7 /* CheckInternet.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		62AD4E862462A52C00096484 /* Saved */ = {
+			isa = PBXGroup;
+			children = (
+				62E12FFE245CA249001AB4BF /* SavedViewController.swift */,
+				62AD4E872462A56200096484 /* SavedTableViewCell.swift */,
+			);
+			path = Saved;
 			sourceTree = "<group>";
 		};
 		62AEA594245F391C006A237D /* Categories */ = {
@@ -338,7 +352,9 @@
 				62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */,
 				62AC9CD2246042340090B7CE /* FactTableViewCell.swift in Sources */,
 				62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */,
+				62FD37682462DE5500653BD1 /* SuggestViewController.swift in Sources */,
 				622669F0245C74C800E00F55 /* IntroScreenViewController.swift in Sources */,
+				62AD4E882462A56200096484 /* SavedTableViewCell.swift in Sources */,
 				623B77532461296A00C893F7 /* SettingsTableViewController.swift in Sources */,
 				626B94842461CB4300F0A671 /* MailViewController.swift in Sources */,
 				62E12FFF245CA249001AB4BF /* SavedViewController.swift in Sources */,
