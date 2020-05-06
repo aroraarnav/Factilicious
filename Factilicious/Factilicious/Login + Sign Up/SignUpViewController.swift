@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     
     var ref : DatabaseReference!
     var handle : DatabaseHandle!
@@ -27,6 +27,11 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
         ChangeCatViewController.didComplete = true
         signUpSpinner.isHidden = true
         ref = Database.database().reference()
@@ -138,5 +143,10 @@ class SignUpViewController: UIViewController {
     func showError (_ message:String) {
         errorLabel.text = message
         errorLabel.isHidden = false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }

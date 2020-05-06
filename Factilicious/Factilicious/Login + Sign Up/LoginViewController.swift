@@ -9,7 +9,8 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -21,6 +22,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
         loginSpinner.isHidden = true
         hideKeyboardWhenTappedAround()
         // Set up Navbar
@@ -94,4 +98,10 @@ class LoginViewController: UIViewController {
         Utilities.styleTextFieldLogin(emailTextField)
         Utilities.styleTextFieldLogin(passwordTextField)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
 }
+

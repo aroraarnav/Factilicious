@@ -35,6 +35,7 @@
 		62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */; };
 		62E12FFF245CA249001AB4BF /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E12FFE245CA249001AB4BF /* SavedViewController.swift */; };
 		62FD37682462DE5500653BD1 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD37672462DE5500653BD1 /* SuggestViewController.swift */; };
+		62FD376A2462E24A00653BD1 /* ChangeNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD37692462E24A00653BD1 /* ChangeNameViewController.swift */; };
 		DCE97A09DAA336210D618FB3 /* Pods_Factilicious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56BE13E8A6BE9AFA6463549 /* Pods_Factilicious.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		62E12FFC245CA23E001AB4BF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		62E12FFE245CA249001AB4BF /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		62FD37672462DE5500653BD1 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
+		62FD37692462E24A00653BD1 /* ChangeNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameViewController.swift; sourceTree = "<group>"; };
 		C56BE13E8A6BE9AFA6463549 /* Pods_Factilicious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Factilicious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6691953CCD816BDB7960D6E /* Pods-Factilicious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Factilicious.release.xcconfig"; path = "Target Support Files/Pods-Factilicious/Pods-Factilicious.release.xcconfig"; sourceTree = "<group>"; };
 		FD9C85A83E0302F65844898B /* Pods-Factilicious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Factilicious.debug.xcconfig"; path = "Target Support Files/Pods-Factilicious/Pods-Factilicious.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				626B94832461CB4300F0A671 /* MailViewController.swift */,
 				626B94852461DED700F0A671 /* ChangeCatViewController.swift */,
 				62FD37672462DE5500653BD1 /* SuggestViewController.swift */,
+				62FD37692462E24A00653BD1 /* ChangeNameViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */,
 				62AC9CD2246042340090B7CE /* FactTableViewCell.swift in Sources */,
 				62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */,
+				62FD376A2462E24A00653BD1 /* ChangeNameViewController.swift in Sources */,
 				62FD37682462DE5500653BD1 /* SuggestViewController.swift in Sources */,
 				622669F0245C74C800E00F55 /* IntroScreenViewController.swift in Sources */,
 				62AD4E882462A56200096484 /* SavedTableViewCell.swift in Sources */,

@@ -32,6 +32,10 @@ class FactsViewController: UIViewController {
     
     static var backgroundImage : String?
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
@@ -54,9 +58,6 @@ class FactsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Refresh to prevent White
-        refreshFacts(self)
         
         // Implement Refresh Control
         refreshControl = UIRefreshControl ()
@@ -89,6 +90,9 @@ class FactsViewController: UIViewController {
             self.bgView.isHidden = true
             self.gettingFacts.isHidden = true
             self.tabBarController?.tabBar.isHidden = false
+            
+            // Refresh to prevent White
+            self.refreshFacts(self)
             })
         
     }
