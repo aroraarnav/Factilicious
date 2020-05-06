@@ -17,6 +17,8 @@ class FactsViewController: UIViewController {
     @IBOutlet weak var TableView: UITableView!
     @IBOutlet weak var factSpinner: UIActivityIndicatorView!
     
+    
+    var uidUser : String?
     var fact : String!
     var shuffled = [String] ()
     var facts = [String] ()
@@ -34,6 +36,7 @@ class FactsViewController: UIViewController {
         super.viewDidAppear(true)
         
         let uid = defaults.string(forKey: "uid")
+        uidUser = uid
         
         // Set the Background
         
@@ -106,7 +109,7 @@ extension FactsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 250
+        return 280
         
     }
     
@@ -133,12 +136,12 @@ extension FactsViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension FactsViewController: FactCellDelegate {
     func didTapSave(fact: String) {
-        
+        ref?.child("Users").child(uidUser!).child("Saved").childByAutoId().setValue(fact)
     }
     
     func didTapShare(fact: String) {
         // Instantiate Share View Controller
-        let shareString = "Today, I got to know about this cool fact on the Factilicious App!\n\n " + fact as Any
+        let shareString = "Today, I got to know about this cool fact on the Factilicious App!\n\n" + fact as Any
         let shareVC = UIActivityViewController (activityItems: [shareString], applicationActivities: nil)
         shareVC.popoverPresentationController?.sourceView = self.view
         

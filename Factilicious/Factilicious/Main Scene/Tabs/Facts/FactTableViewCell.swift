@@ -22,6 +22,7 @@ class FactTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        saveButton.setImage(UIImage(named: "empty-heart"), for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,7 +31,22 @@ class FactTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    @IBAction func saveButtonPressed(_ sender: Any) {
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        
+        // Create Like Animation
+        
+        UIView.transition(with: sender as UIView, duration: 0.4, options: .transitionFlipFromRight, animations: {
+                   sender.setImage(UIImage(named: "filled-heart"), for: .normal)
+               }, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+        UIView.transition(with: sender as UIView, duration: 0.2, options: .transitionFlipFromLeft, animations: {
+                sender.setImage(UIImage(named: "empty-heart"), for: .normal)
+            }, completion: nil)
+        }
+        
+        
+        
         delegate?.didTapSave(fact: factLabel.text!)
     }
     @IBAction func shareButtonPressed(_ sender: Any) {
