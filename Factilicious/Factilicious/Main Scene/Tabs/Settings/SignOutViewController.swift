@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignOutViewController: UIViewController {
     
@@ -18,6 +19,13 @@ class SignOutViewController: UIViewController {
         super.viewDidLoad()
         spinner.startAnimating()
         defaults.set(false, forKey: "isSignedIn")
+        
+        do {
+            try Auth.auth().signOut()
+            print ("Success")
+        } catch let err {
+            print (err)
+        }
         
         let delay = 3 // seconds
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(delay)) {

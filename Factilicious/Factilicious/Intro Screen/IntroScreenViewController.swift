@@ -8,6 +8,7 @@
 
 import UIKit
 import paper_onboarding
+import Firebase
 
 class IntroScreenViewController: UIViewController {
 
@@ -37,6 +38,9 @@ class IntroScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let notificationCenter = NotificationCenter.default
+        
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
         
         introView.dataSource = self
         introView.delegate = self
@@ -49,7 +53,15 @@ class IntroScreenViewController: UIViewController {
         getStartedButton.layer.borderWidth = 3.0
     }
 
-
+    @objc func appMovedToBackground() {
+        print("App moved to background!")
+        do {
+            try Auth.auth().signOut()
+            print ("Success")
+        } catch let err {
+            print (err)
+        }
+    }
 }
 
 extension IntroScreenViewController: PaperOnboardingDelegate, PaperOnboardingDataSource {

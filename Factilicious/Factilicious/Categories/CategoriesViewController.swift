@@ -11,6 +11,8 @@ import Firebase
 
 class CategoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    static var didComeBack:Bool? = false
+    
     var defaults = UserDefaults.standard
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,15 +56,25 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
     var isChecked : Bool! = false
     let dataModel = ["Animals", "Cars", "Sports", "Math", "Food"]
     var ref : DatabaseReference?
     static var userCategories = [String] ()
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        print (ChangeCatViewController.didComplete)
+        CategoriesViewController.userCategories = [String] ()
+        
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         ref = Database.database().reference()
         
         tableView.delegate = self
@@ -80,12 +92,33 @@ class CategoriesViewController: UIViewController, UITableViewDelegate, UITableVi
             createAlert(title: "Notice", message: "Please select at least 2 categories of your choice.")
         } else {
             
-            // Store Preferences in Database
-            let uid = defaults.string(forKey: "uid")
-        ref?.child("Users").child(uid!).child("Categories").setValue([CategoriesViewController.userCategories])
-            // Transition To Home Screen
-            
-            self.performSegue(withIdentifier: "signUpSegue", sender: nil)
+            if ChangeCatViewController.didComplete == false {
+                // Store Preferences in Database
+                    let uid = defaults.string(forKey: "uid")
+                
+                    ref?.child("Users").child(uid!).child("Categories").setValue(nil)
+                ref?.child("Users").child(uid!).child("Categories").setValue([CategoriesViewController.userCategories])
+                
+                    ChangeCatViewController.didComplete = true
+                
+                    // Transition To Settings
+                    CategoriesViewController.didComeBack = true
+                    navigationController?.popViewController(animated: true)
+                    dismiss(animated: true, completion: nil)
+                    
+                    
+                        
+            } else {
+                // Store Preferences in Database
+                    let uid = defaults.string(forKey: "uid")
+                ref?.child("Users").child(uid!).child("Categories").setValue([CategoriesViewController.userCategories])
+                    // Transition To Home Screen
+                    
+                    self.performSegue(withIdentifier: "signUpSegue", sender: nil)
+                
+                    ChangeCatViewController.didComplete = false
+                    
+            }
             
                 
         }

@@ -19,6 +19,8 @@
 		623B7755246177C300C893F7 /* CheckInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623B7754246177C300C893F7 /* CheckInternet.swift */; };
 		623B775824617CAE00C893F7 /* ThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623B775724617CAE00C893F7 /* ThemesViewController.swift */; };
 		626B94802461899A00F0A671 /* SignOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626B947F2461899A00F0A671 /* SignOutViewController.swift */; };
+		626B94842461CB4300F0A671 /* MailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626B94832461CB4300F0A671 /* MailViewController.swift */; };
+		626B94862461DED700F0A671 /* ChangeCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626B94852461DED700F0A671 /* ChangeCatViewController.swift */; };
 		6294178E245EABBB00D4B37A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6294178D245EABBB00D4B37A /* MainViewController.swift */; };
 		62941794245EC3DA00D4B37A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62941793245EC3DA00D4B37A /* SettingsViewController.swift */; };
 		62A0B82D245CCD56000272A5 /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */; };
@@ -49,6 +51,8 @@
 		623B7754246177C300C893F7 /* CheckInternet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInternet.swift; sourceTree = "<group>"; };
 		623B775724617CAE00C893F7 /* ThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewController.swift; sourceTree = "<group>"; };
 		626B947F2461899A00F0A671 /* SignOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutViewController.swift; sourceTree = "<group>"; };
+		626B94832461CB4300F0A671 /* MailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailViewController.swift; sourceTree = "<group>"; };
+		626B94852461DED700F0A671 /* ChangeCatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeCatViewController.swift; sourceTree = "<group>"; };
 		6294178D245EABBB00D4B37A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		62941793245EC3DA00D4B37A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		62A0B82C245CCD56000272A5 /* KeyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 			children = (
 				623B775724617CAE00C893F7 /* ThemesViewController.swift */,
 				626B947F2461899A00F0A671 /* SignOutViewController.swift */,
+				626B94832461CB4300F0A671 /* MailViewController.swift */,
+				626B94852461DED700F0A671 /* ChangeCatViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -328,11 +334,13 @@
 				62A0B82D245CCD56000272A5 /* KeyboardExtension.swift in Sources */,
 				623B7755246177C300C893F7 /* CheckInternet.swift in Sources */,
 				6294178E245EABBB00D4B37A /* MainViewController.swift in Sources */,
+				626B94862461DED700F0A671 /* ChangeCatViewController.swift in Sources */,
 				62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */,
 				62AC9CD2246042340090B7CE /* FactTableViewCell.swift in Sources */,
 				62E12FFD245CA23E001AB4BF /* SignUpViewController.swift in Sources */,
 				622669F0245C74C800E00F55 /* IntroScreenViewController.swift in Sources */,
 				623B77532461296A00C893F7 /* SettingsTableViewController.swift in Sources */,
+				626B94842461CB4300F0A671 /* MailViewController.swift in Sources */,
 				62E12FFF245CA249001AB4BF /* SavedViewController.swift in Sources */,
 				62266A03245C7D0C00E00F55 /* IntroViewClass.swift in Sources */,
 				626B94802461899A00F0A671 /* SignOutViewController.swift in Sources */,

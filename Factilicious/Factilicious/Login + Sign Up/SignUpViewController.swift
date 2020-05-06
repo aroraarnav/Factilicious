@@ -27,6 +27,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ChangeCatViewController.didComplete = true
         signUpSpinner.isHidden = true
         ref = Database.database().reference()
         hideKeyboardWhenTappedAround()

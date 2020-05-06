@@ -59,7 +59,6 @@ class LoginViewController: UIViewController {
             // Clean the data
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
             Auth.auth().signIn(withEmail: email, password: password) { (result, err) in
                 if err != nil {
                     self.loginSpinner.stopAnimating()
@@ -73,6 +72,7 @@ class LoginViewController: UIViewController {
                     LoginViewController.uid =  result?.user.uid
                     self.defaults.set(result?.user.uid, forKey: "uid")
                     self.defaults.set(true, forKey: "isSignedIn")
+                    ChangeCatViewController.didComplete = false
                     self.transitionToHome ()
                     
                 }

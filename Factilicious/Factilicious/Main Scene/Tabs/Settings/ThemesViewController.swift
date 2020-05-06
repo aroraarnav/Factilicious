@@ -19,6 +19,7 @@ class ThemesViewController: UIViewController {
     @IBOutlet weak var pinkTheme: UIButton!
     @IBOutlet weak var turquoiseTheme: UIButton!
     @IBOutlet weak var greenTheme: UIButton!
+    @IBOutlet weak var blueTheme: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,11 +32,22 @@ class ThemesViewController: UIViewController {
         turquoiseTheme.layer.cornerRadius = 30
         pinkTheme.layer.cornerRadius = 30
         greenTheme.layer.cornerRadius = 30
+        blueTheme.layer.cornerRadius = 30
         
     }
     
     @IBAction func cancelPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func bluePressed(_ sender: Any) {
+        if CheckInternet.Connection() {
+            
+            ref?.child("Users").child(uid!).child("Theme").setValue("blue_background")
+            self.performSegue(withIdentifier: "themeSegue", sender: nil)
+        } else {
+            
+        }
     }
     
     @IBAction func yellowPressed(_ sender: Any) {
