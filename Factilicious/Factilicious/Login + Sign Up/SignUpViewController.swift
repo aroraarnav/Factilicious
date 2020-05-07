@@ -97,8 +97,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func termsPressed(_ sender: Any) {
+        self.present(WebPage.termsSvc, animated: true, completion: nil)
     }
     @IBAction func privacyPolicyPressed(_ sender: Any) {
+        self.present(WebPage.privacySvc, animated: true, completion: nil)
     }
     
     func setUpElements() {

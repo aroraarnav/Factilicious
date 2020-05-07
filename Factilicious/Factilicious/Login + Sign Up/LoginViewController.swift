@@ -9,8 +9,10 @@
 import UIKit
 import FirebaseAuth
 
+
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    let webPage = WebPage ()
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -85,9 +87,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func termsPressed(_ sender: Any) {
+        self.present(WebPage.termsSvc, animated: true, completion: nil)
     }
     
     @IBAction func privacyPressed(_ sender: Any) {
+        self.present(WebPage.privacySvc, animated: true, completion: nil)
     }
     
     func transitionToHome () {

@@ -14,6 +14,7 @@ class FactsViewController: UIViewController {
     
     
 
+    @IBOutlet weak var themes: UIButton!
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var refresh: UIButton!
     @IBOutlet weak var TableView: UITableView!
@@ -81,8 +82,8 @@ class FactsViewController: UIViewController {
             
             
         }
-        
         refresh.isHidden = true
+        themes.isHidden = true
         factSpinner.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         
         // Implement Refresh Control
@@ -116,6 +117,7 @@ class FactsViewController: UIViewController {
             self.bgView.isHidden = true
             self.tabBarController?.tabBar.isHidden = false
             self.refresh.isHidden = false
+            self.themes.isHidden = false
             
             // Refresh to prevent White
             self.refreshFacts(self)

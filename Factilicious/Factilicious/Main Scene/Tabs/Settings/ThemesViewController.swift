@@ -11,6 +11,7 @@ import Firebase
 
 class ThemesViewController: UIViewController {
     
+    @IBOutlet weak var netLabel: UILabel!
     var ref : DatabaseReference?
     var defaults = UserDefaults.standard
     var uid: String?
@@ -49,7 +50,7 @@ class ThemesViewController: UIViewController {
             ref?.child("Users").child(uid!).child("Theme").setValue("blue_background")
             self.performSegue(withIdentifier: "themeSegue", sender: nil)
         } else {
-            
+            netLabel.isHidden = false
         }
     }
     
@@ -59,7 +60,7 @@ class ThemesViewController: UIViewController {
             ref?.child("Users").child(uid!).child("Theme").setValue("yellow_background")
             self.performSegue(withIdentifier: "themeSegue", sender: nil)
         } else {
-            
+            netLabel.isHidden = false
         }
     }
     
@@ -68,7 +69,7 @@ class ThemesViewController: UIViewController {
             ref?.child("Users").child(uid!).child("Theme").setValue("pink_background")
             self.performSegue(withIdentifier: "themeSegue", sender: nil)
         } else {
-            
+            netLabel.isHidden = false
         }
     }
     
@@ -77,7 +78,7 @@ class ThemesViewController: UIViewController {
             ref?.child("Users").child(uid!).child("Theme").setValue("turquoise_background")
             self.performSegue(withIdentifier: "themeSegue", sender: nil)
         } else {
-            
+            netLabel.isHidden = false
         }
     }
     @IBAction func greenPressed(_ sender: Any) {
@@ -85,7 +86,7 @@ class ThemesViewController: UIViewController {
             ref?.child("Users").child(uid!).child("Theme").setValue("green_background")
             self.performSegue(withIdentifier: "themeSegue", sender: nil)
         } else {
-            
+            netLabel.isHidden = false
         }
     }
     @IBAction func rainbowPressed(_ sender: Any) {
@@ -93,7 +94,7 @@ class ThemesViewController: UIViewController {
             ref?.child("Users").child(uid!).child("Theme").setValue("rainbow_background")
             self.performSegue(withIdentifier: "themeSegue", sender: nil)
         } else {
-            
+            netLabel.isHidden = false
         }
     }
     

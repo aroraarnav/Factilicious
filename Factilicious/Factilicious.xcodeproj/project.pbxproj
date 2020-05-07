@@ -28,6 +28,8 @@
 		62A0B82F245CCE72000272A5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A0B82E245CCE72000272A5 /* Utilities.swift */; };
 		62A0B831245CD257000272A5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62A0B830245CD257000272A5 /* GoogleService-Info.plist */; };
 		62A8B1392463582A00D2ED1C /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A8B1382463582A00D2ED1C /* NotificationsViewController.swift */; };
+		62A8B13C2464049300D2ED1C /* WebPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A8B13B2464049300D2ED1C /* WebPage.swift */; };
+		62A8B13E246408AA00D2ED1C /* LegalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A8B13D246408AA00D2ED1C /* LegalViewController.swift */; };
 		62AC9CD2246042340090B7CE /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AC9CD1246042340090B7CE /* FactTableViewCell.swift */; };
 		62AD4E882462A56200096484 /* SavedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AD4E872462A56200096484 /* SavedTableViewCell.swift */; };
 		62AEA591245F2BBC006A237D /* FactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AEA590245F2BBC006A237D /* FactsViewController.swift */; };
@@ -65,6 +67,8 @@
 		62A0B82E245CCE72000272A5 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		62A0B830245CD257000272A5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		62A8B1382463582A00D2ED1C /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		62A8B13B2464049300D2ED1C /* WebPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPage.swift; sourceTree = "<group>"; };
+		62A8B13D246408AA00D2ED1C /* LegalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalViewController.swift; sourceTree = "<group>"; };
 		62AC9CD1246042340090B7CE /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
 		62AD4E872462A56200096484 /* SavedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedTableViewCell.swift; sourceTree = "<group>"; };
 		62AEA590245F2BBC006A237D /* FactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 		622669EA245C74C800E00F55 /* Factilicious */ = {
 			isa = PBXGroup;
 			children = (
+				62A8B13A2464040800D2ED1C /* Extras */,
 				62AEA594245F391C006A237D /* Categories */,
 				6294178F245EC36100D4B37A /* Main Scene */,
 				62A0B82B245CCC65000272A5 /* Helpers */,
@@ -142,7 +147,6 @@
 				622669F6245C74CB00E00F55 /* LaunchScreen.storyboard */,
 				622669F9245C74CB00E00F55 /* Info.plist */,
 				62A0B830245CD257000272A5 /* GoogleService-Info.plist */,
-				629111162463089A00136C9B /* Notification.swift */,
 			);
 			path = Factilicious;
 			sourceTree = "<group>";
@@ -166,6 +170,7 @@
 				62FD37672462DE5500653BD1 /* SuggestViewController.swift */,
 				62FD37692462E24A00653BD1 /* ChangeNameViewController.swift */,
 				62A8B1382463582A00D2ED1C /* NotificationsViewController.swift */,
+				62A8B13D246408AA00D2ED1C /* LegalViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -199,6 +204,15 @@
 				623B7754246177C300C893F7 /* CheckInternet.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		62A8B13A2464040800D2ED1C /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				629111162463089A00136C9B /* Notification.swift */,
+				62A8B13B2464049300D2ED1C /* WebPage.swift */,
+			);
+			path = Extras;
 			sourceTree = "<group>";
 		};
 		62AD4E862462A52C00096484 /* Saved */ = {
@@ -357,6 +371,7 @@
 				62A0B82D245CCD56000272A5 /* KeyboardExtension.swift in Sources */,
 				623B7755246177C300C893F7 /* CheckInternet.swift in Sources */,
 				6294178E245EABBB00D4B37A /* MainViewController.swift in Sources */,
+				62A8B13E246408AA00D2ED1C /* LegalViewController.swift in Sources */,
 				626B94862461DED700F0A671 /* ChangeCatViewController.swift in Sources */,
 				62E12FFB245CA22C001AB4BF /* LoginViewController.swift in Sources */,
 				62AC9CD2246042340090B7CE /* FactTableViewCell.swift in Sources */,
@@ -381,6 +396,7 @@
 				62AEA593245F34F6006A237D /* CategoriesViewController.swift in Sources */,
 				62AEA591245F2BBC006A237D /* FactsViewController.swift in Sources */,
 				62AEA596245F3938006A237D /* CategoriesTableViewCell.swift in Sources */,
+				62A8B13C2464049300D2ED1C /* WebPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,7 +541,8 @@
 			baseConfigurationReference = FD9C85A83E0302F65844898B /* Pods-Factilicious.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 85CS83A5PY;
 				INFOPLIST_FILE = Factilicious/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -535,6 +552,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jayantarora.Factilicious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = FactiliciousDistribution;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -545,7 +563,8 @@
 			baseConfigurationReference = E6691953CCD816BDB7960D6E /* Pods-Factilicious.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 85CS83A5PY;
 				INFOPLIST_FILE = Factilicious/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -555,6 +574,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jayantarora.Factilicious;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = FactiliciousDistribution;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

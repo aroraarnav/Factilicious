@@ -11,6 +11,8 @@ import paper_onboarding
 import Firebase
 
 class IntroScreenViewController: UIViewController {
+    
+    
 
     let notificationPublisher = NotificationPublisher ()
     
@@ -53,6 +55,7 @@ class IntroScreenViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        print ("hello")
         super.viewDidAppear(true)
         IntroScreenViewController.shuffledFacts = [String] ()
         // Set it up
@@ -63,7 +66,6 @@ class IntroScreenViewController: UIViewController {
             let fact = snapshot.value as? String
             self.notiFacts.append(fact!)
             IntroScreenViewController.shuffledFacts = self.notiFacts.shuffled()
-            print (IntroScreenViewController.shuffledFacts)
             self.randInt = Int.random(in: 0...IntroScreenViewController.shuffledFacts.count - 1)
             
             
@@ -100,7 +102,6 @@ class IntroScreenViewController: UIViewController {
         
         if userData.string(forKey: "already") == nil {
             userData.set("false" , forKey: "already")
-            print ("nibba" + userData.string(forKey: "already")!)
         }
         
     
@@ -127,10 +128,8 @@ class IntroScreenViewController: UIViewController {
     @objc func appMovedToBackground() {
         
         UIApplication.shared.applicationIconBadgeNumber = 0
-        print("App moved to background!")
         do {
             try Auth.auth().signOut()
-            print ("Success")
         } catch let err {
             print (err)
         }
@@ -138,10 +137,10 @@ class IntroScreenViewController: UIViewController {
         let isIndexValid = IntroScreenViewController.shuffledFacts.indices.contains(0)
         
         if isIndexValid {
-            self.notificationPublisher.sendNotification(title: "New Fact!", subtitle: "", body: IntroScreenViewController.shuffledFacts[0]!, badge: 1, delayInterval: 1200)
+            self.notificationPublisher.sendNotification(title: "New Fact!", subtitle: "", body: IntroScreenViewController.shuffledFacts[0]!, badge: 1, delayInterval: 1800)
             
         } else {
-            self.notificationPublisher.sendNotification(title: "New Fact!", subtitle: "", body: "Canadians say “sorry” so much that a law was passed in 2009 declaring that an apology can’t be used as evidence of admission to guilt.", badge: 1, delayInterval: 1200)
+            self.notificationPublisher.sendNotification(title: "New Fact!", subtitle: "", body: "Canadians say “sorry” so much that a law was passed in 2009 declaring that an apology can’t be used as evidence of admission to guilt.", badge: 1, delayInterval: 1800)
             
         }
         
@@ -178,7 +177,7 @@ extension IntroScreenViewController: PaperOnboardingDelegate, PaperOnboardingDat
         
         // Required Assets
         let bgThree = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        let bgTwo =   #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
+        let bgTwo =  #colorLiteral(red: 0.5647058824, green: 0.9333333333, blue: 0.5647058824, alpha: 1)
         let bgOne =   #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
         
         let titleFont = UIFont(name: "AvenirNext-Bold", size: 24)
@@ -193,7 +192,7 @@ extension IntroScreenViewController: PaperOnboardingDelegate, PaperOnboardingDat
                 
                 OnboardingItemInfo (informationImage: bell!, title: "Get Notifications Regularly", description: "Get an amazing fact delivered to you regularly. Simply allow Notifications and experience the magic!", pageIcon: icon!, color: bgOne, titleColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), descriptionColor: UIColor.white, titleFont: titleFont!, descriptionFont: descFont!),
                 
-                OnboardingItemInfo (informationImage: share!, title: "Share Facts Easily", description: "Factilicious allows you to share any fact you like with your family and friends, with a tap of a button.", pageIcon: icon!, color: bgThree, titleColor: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), descriptionColor: UIColor.black, titleFont: titleFont!, descriptionFont: descFont!),
+                OnboardingItemInfo (informationImage: share!, title: "Share Facts Easily", description: "Factilicious allows you to share any fact you like with your family and friends, \n with a tap of a button.", pageIcon: icon!, color: bgThree, titleColor: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), descriptionColor: UIColor.black, titleFont: titleFont!, descriptionFont: descFont!),
             ] [index]
     }
     
