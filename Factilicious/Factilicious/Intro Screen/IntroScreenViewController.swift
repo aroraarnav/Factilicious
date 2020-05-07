@@ -48,6 +48,7 @@ class IntroScreenViewController: UIViewController {
     
     @IBAction func getStartedPressed(_ sender: Any) {
         userData.set(true, forKey: "introCompleted")
+        userData.set(true, forKey: "willReview")
         requestNotifications ()
     }
     
@@ -137,9 +138,10 @@ class IntroScreenViewController: UIViewController {
         let isIndexValid = IntroScreenViewController.shuffledFacts.indices.contains(0)
         
         if isIndexValid {
-            self.notificationPublisher.sendNotification(title: "New Fact!", subtitle: "", body: IntroScreenViewController.shuffledFacts[0]!, badge: 1, delayInterval: 1800)
+            self.notificationPublisher.sendNotification(title: "New Fact!", subtitle: "", body: IntroScreenViewController.shuffledFacts[0]!, badge: 1, delayInterval: 1200)
+            
         } else {
-            self.notificationPublisher.sendNotification(title: "New Fact!", subtitle: "", body: "Canadians say “sorry” so much that a law was passed in 2009 declaring that an apology can’t be used as evidence of admission to guilt.", badge: 1, delayInterval: 1800)
+            self.notificationPublisher.sendNotification(title: "New Fact!", subtitle: "", body: "Canadians say “sorry” so much that a law was passed in 2009 declaring that an apology can’t be used as evidence of admission to guilt.", badge: 1, delayInterval: 1200)
             
         }
         

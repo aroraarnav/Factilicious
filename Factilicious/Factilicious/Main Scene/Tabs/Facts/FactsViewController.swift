@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import StoreKit
 
 class FactsViewController: UIViewController {
     
@@ -62,7 +63,24 @@ class FactsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        if defaults.bool(forKey: "willReview") {
+            
+            
+            let seconds = 30.0
+            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                // Put your code which should be executed with a delay here
+                
+                // Call the Review
+                SKStoreReviewController.requestReview()
+                
+                
+                // Set it to false
+                self.defaults.set(false, forKey: "willReview")
+            }
+            
+            
+        }
         
         refresh.isHidden = true
         factSpinner.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
